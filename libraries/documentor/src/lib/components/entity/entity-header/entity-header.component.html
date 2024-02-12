@@ -1,0 +1,25 @@
+@if (entity) {
+
+<div class="header mat-typography" responsiveContainer>
+
+  @if (entity.content.githubLink; as githubLink) {
+    <jbr-github-btn [path]="githubLink" class="github-link"></jbr-github-btn>
+  }
+
+  <div class="left">
+
+    @if (entity.content.type; as type) {
+      <jbr-entity-type-label class="mat-typography" [type]="type"></jbr-entity-type-label>
+    }
+
+    @if (entity.label) {
+      <h1 class="title">{{entity.label | classCase}}</h1>
+    } @else {
+      <h1 class="title">{{entity.content.type ? (entity.path | classCase) : (entity.path | words)}}</h1>
+    }
+
+  </div>
+
+</div>
+
+}

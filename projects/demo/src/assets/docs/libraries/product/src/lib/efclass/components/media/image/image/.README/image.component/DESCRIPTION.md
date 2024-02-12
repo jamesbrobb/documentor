@@ -1,0 +1,2 @@
+
+Renders an image component.

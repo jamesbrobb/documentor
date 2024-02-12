@@ -1,0 +1,85 @@
+@if (form) {
+
+<form [formGroup]="form">
+
+  <div class="layout">
+
+  @for (controlGroup of controlGroups; track controlGroup) {
+
+    <div class="controls-group">
+      <h3>{{controlGroup.header}}</h3>
+      <div class="controls-grid">
+
+        @for (control of controlGroup.controls; track control) {
+
+          @if (control| guardType: isInputControl; as input) {
+
+            @switch (input.type) {
+              @case ('number') {
+
+                <mat-form-field class="control">
+                  <mat-label>{{control.label}}</mat-label>
+                  <input type="number"
+                         matInput
+                         [formControlName]="input.key"
+                         [id]="input.key"
+                         [name]="input.key"
+                         [min]="input.min || 0"
+                         [max]="input.max || 100">
+                </mat-form-field>
+              }
+              @case ('checkbox') {
+
+                <mat-checkbox class="control" [formControlName]="input.key" [id]="input.key" [name]="input.key">{{input.label}}</mat-checkbox>
+
+              }
+              @default {
+                <mat-form-field appearance="fill" class="control">
+                  <mat-label>{{control.label}}</mat-label>
+                  <input [type]="input.type || 'text'"
+                       matInput
+                       [formControlName]="input.key"
+                       [id]="input.key"
+                       [name]="input.key">
+                </mat-form-field>
+              }
+            }
+          }
+
+          @if (control| guardType: isSelectControl; as select) {
+
+            <mat-form-field appearance="fill" class="control">
+              <mat-label>{{control.label}}</mat-label>
+              <mat-select [id]="select.key" [formControlName]="select.key">
+                @for (opt of select.options; track opt) {
+                  @if (!opt.value) {
+                    <mat-option [value]="null">{{opt.label}}</mat-option>
+                  } @else {
+                    <mat-option [value]="opt.value">{{opt.label || opt.value}}</mat-option>
+                  }
+                }
+              </mat-select>
+            </mat-form-field>
+
+          }
+
+          @if (control| guardType: isJsonControl; as json) {
+
+            <div class="control control-group">
+              <json-editor jsonEditorControl
+                           [id]="json.key"
+                           [formControlName]="json.key">
+              </json-editor>
+            </div>
+
+          }
+        }
+
+      </div>
+
+    </div>
+  }
+  </div>
+
+</form>
+}

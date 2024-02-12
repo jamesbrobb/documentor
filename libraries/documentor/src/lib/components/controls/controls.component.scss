@@ -1,0 +1,65 @@
+@use "@jamesbenrobb/styles/grid" as g;
+
+:host {
+  display: block;
+
+  &:empty {
+    display: none;
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    > *:not(:last-child) {
+      //margin-bottom: 10px;
+    }
+
+    --mat-form-field-container-height: 48px;
+    --mat-form-field-filled-label-display: block;
+    --mat-form-field-container-vertical-padding: 10px;
+    --mat-form-field-filled-with-label-container-padding-top: 20px;
+    --mat-form-field-filled-with-label-container-padding-bottom: 3px;
+    --mat-form-field-container-text-line-height: 24px;
+    --mat-form-field-container-text-size: 15px;
+    --mdc-filled-text-field-label-text-size: 15px;
+  }
+
+  .controls-group {
+    @include g.auto-fill-grid('controls-grid', 'control', 200px, 10px, 10px);
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      .CodeMirror {
+        background-color: #272822;
+        color: #f8f8f2;
+
+        .CodeMirror-gutters {
+          background-color: #272822;
+        }
+
+        span.cm-string {
+          color: #a6e22e
+        }
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      json-editor {
+        height: fit-content;
+        max-height: 300px;
+        border: solid 1px rgba(255, 255, 255, 0.2);
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

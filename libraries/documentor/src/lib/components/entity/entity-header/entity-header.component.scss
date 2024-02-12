@@ -1,0 +1,48 @@
+:host {
+  display: block;
+
+  --LG: 450px;
+  --header-flex-direction: column;
+  --header-align-items: flex-start;
+  --header-justify-content: space-between;
+
+  --title-vertical-margin: 20px;
+  --github-link-padding-bottom: 25px;
+  --title-font-size: 28px;
+
+  .header {
+    display: flex;
+    flex-direction: var(--header-flex-direction);
+    align-items: var(--header-align-items);
+    justify-content: var( --header-justify-content);
+
+    --jrb-github-btn-size: 36px;
+
+    &.LG {
+      --jrb-github-btn-size: 40px;
+      --header-flex-direction: row-reverse;
+      --header-align-items: flex-end;
+
+      --github-link-padding-bottom: 0;
+      --title-vertical-margin: 25px;
+      --title-font-size: 32px;
+    }
+
+    .github-link {
+      padding-bottom: var(--github-link-padding-bottom);
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: var(--title-vertical-margin);
+      padding-right: 20px;
+
+      .title {
+        padding-right: 20px;
+        margin: 0;
+        font-size: var(--title-font-size);
+      }
+    }
+  }
+}

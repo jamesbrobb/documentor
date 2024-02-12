@@ -1,0 +1,1108 @@
+{
+  "routes": [{
+      "path": "/",
+      "redirectTo": "about"
+    },
+    {
+      "path": "about",
+      "content": {
+        "githubLink": "/",
+        "description": "details/home/README.md"
+      }
+    }, {
+      "path": "libraries",
+      "children": [
+        {
+          "path": "core",
+          "children": [
+            {
+              "path": "analytics",
+              "children": [
+                {
+                  "path": "trackers",
+                  "children": [
+                    {
+                      "path": "google-analytics",
+                      "label": "google analytics",
+                      "content": {
+                        "type": "",
+                        "githubLink": "libraries/core/src/lib/analytics/trackers/google-analytics",
+                        "isModule": true,
+                        "description": "libraries/core/src/lib/analytics/trackers/google-analytics/README.md"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "label": "analytics",
+              "content": {
+                "type": "",
+                "githubLink": "libraries/core/src/lib/analytics",
+                "isModule": true,
+                "demonstrates": "libraries/core/src/lib/analytics/.README/DEMONSTRATES.md",
+                "description": "libraries/core/src/lib/analytics/.README/DESCRIPTION.md",
+                "sections": [
+                  {
+                    "path": "analytics-service",
+                    "label": "analytics service",
+                    "name": "analytics-service",
+                    "content": {
+                      "type": "service",
+                      "githubLink": "libraries/core/src/lib/analytics/analytics-service.ts",
+                      "info": [
+                        {
+                          "name": "api",
+                          "path": "api",
+                          "uri": "libraries/core/src/lib/analytics/.README/analytics-service/API.md",
+                          "isUIExample": false
+                        },
+                        {
+                          "name": "example",
+                          "path": "example",
+                          "uri": "libraries/core/src/lib/analytics/.README/analytics-service/EXAMPLE.md",
+                          "isUIExample": false
+                        }
+                      ],
+                      "description": "libraries/core/src/lib/analytics/.README/analytics-service/DESCRIPTION.md"
+                    }
+                  }
+                ],
+                "usage": {
+                  "pages": [
+                    "libraries/core/src/lib/analytics/.README/usage/1.md",
+                    "libraries/core/src/lib/analytics/.README/usage/2.md",
+                    "libraries/core/src/lib/analytics/.README/usage/3.md"
+                  ],
+                  "contents": "libraries/core/src/lib/analytics/.README/usage/contents.md"
+                }
+              }
+            },
+            {
+              "path": "commands",
+              "children": [
+                {
+                  "path": "command",
+                  "label": "command",
+                  "content": {
+                    "type": "",
+                    "githubLink": "libraries/core/src/lib/commands/command",
+                    "isModule": true,
+                    "description": "libraries/core/src/lib/commands/command/.README/DESCRIPTION.md",
+                    "usage": {
+                      "pages": [
+                        "libraries/core/src/lib/commands/command/.README/USAGE.md"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "path": "group",
+                  "label": "group",
+                  "content": {
+                    "type": "",
+                    "githubLink": "libraries/core/src/lib/commands/group",
+                    "isModule": true,
+                    "description": "libraries/core/src/lib/commands/group/.README/DESCRIPTION.md",
+                    "usage": {
+                      "pages": [
+                        "libraries/core/src/lib/commands/group/.README/usage/1.md",
+                        "libraries/core/src/lib/commands/group/.README/usage/2.md",
+                        "libraries/core/src/lib/commands/group/.README/usage/3.md"
+                      ],
+                      "contents": "libraries/core/src/lib/commands/group/.README/usage/contents.md"
+                    }
+                  }
+                },
+                {
+                  "path": "processor",
+                  "label": "processor",
+                  "content": {
+                    "type": "",
+                    "githubLink": "libraries/core/src/lib/commands/processor",
+                    "isModule": true,
+                    "description": "libraries/core/src/lib/commands/processor/.README/DESCRIPTION.md",
+                    "usage": {
+                      "pages": [
+                        "libraries/core/src/lib/commands/processor/.README/usage/1.md",
+                        "libraries/core/src/lib/commands/processor/.README/usage/2.md",
+                        "libraries/core/src/lib/commands/processor/.README/usage/3.md",
+                        "libraries/core/src/lib/commands/processor/.README/usage/4.md"
+                      ],
+                      "contents": "libraries/core/src/lib/commands/processor/.README/usage/contents.md"
+                    }
+                  }
+                }
+              ],
+              "label": "commands",
+              "content": {
+                "type": "",
+                "githubLink": "libraries/core/src/lib/commands",
+                "isModule": true,
+                "demonstrates": "libraries/core/src/lib/commands/.README/DEMONSTRATES.md",
+                "description": "libraries/core/src/lib/commands/.README/DESCRIPTION.md"
+              }
+            },
+            {
+              "path": "http",
+              "label": "http",
+              "content": {
+                "type": "",
+                "githubLink": "libraries/core/src/lib/http",
+                "isModule": true,
+                "demonstrates": "libraries/core/src/lib/http/.README/DEMONSTRATES.md",
+                "description": "libraries/core/src/lib/http/.README/DESCRIPTION.md",
+                "usage": {
+                  "pages": [
+                    "libraries/core/src/lib/http/.README/usage/1.md",
+                    "libraries/core/src/lib/http/.README/usage/2.md",
+                    "libraries/core/src/lib/http/.README/usage/3.md",
+                    "libraries/core/src/lib/http/.README/usage/4.md"
+                  ],
+                  "contents": "libraries/core/src/lib/http/.README/usage/contents.md"
+                }
+              }
+            }
+          ],
+          "label": "core",
+          "content": {
+            "type": "",
+            "githubLink": "libraries/core",
+            "isModule": true,
+            "description": "libraries/core/README.md"
+          }
+        },
+        {
+          "path": "ng",
+          "children": [
+            {
+              "path": "core",
+              "children": [
+                {
+                  "path": "analytics",
+                  "children": [
+                    {
+                      "path": "trackers",
+                      "children": [
+                        {
+                          "path": "google-analytics",
+                          "label": "google analytics",
+                          "content": {
+                            "type": "",
+                            "githubLink": "libraries/ng/src/lib/core/analytics/trackers/google-analytics",
+                            "isModule": true,
+                            "description": "libraries/ng/src/lib/core/analytics/trackers/google-analytics/README.md"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "label": "analytics",
+                  "content": {
+                    "type": "",
+                    "githubLink": "libraries/ng/src/lib/core/analytics",
+                    "isModule": true,
+                    "description": "libraries/ng/src/lib/core/analytics/.README/DESCRIPTION.md",
+                    "usage": {
+                      "pages": [
+                        "libraries/ng/src/lib/core/analytics/.README/usage/1.md",
+                        "libraries/ng/src/lib/core/analytics/.README/usage/2.md"
+                      ],
+                      "contents": "libraries/ng/src/lib/core/analytics/.README/usage/contents.md"
+                    }
+                  }
+                },
+                {
+                  "path": "http",
+                  "label": "http",
+                  "content": {
+                    "type": "",
+                    "githubLink": "libraries/ng/src/lib/core/http",
+                    "isModule": true,
+                    "description": "libraries/ng/src/lib/core/http/README.md"
+                  }
+                }
+              ]
+            }
+          ],
+          "label": "ng",
+          "content": {
+            "type": "",
+            "githubLink": "libraries/ng",
+            "isModule": true,
+            "description": "libraries/ng/README.md"
+          }
+        },
+        {
+          "path": "product",
+          "children": [
+            {
+              "path": "efclass",
+              "children": [
+                {
+                  "path": "components",
+                  "children": [
+                    {
+                      "path": "common",
+                      "children": [
+                        {
+                          "path": "overlay",
+                          "children": [
+                            {
+                              "path": "color-overlay-component",
+                              "label": "color overlay",
+                              "content": {
+                                "type": "component",
+                                "githubLink": "libraries/product/src/lib/efclass/components/common/overlay/color/color-overlay.component.ts",
+                                "info": [
+                                  {
+                                    "name": "api",
+                                    "path": "api",
+                                    "uri": "libraries/product/src/lib/efclass/components/common/overlay/color/.README/color-overlay.component/API.md",
+                                    "isUIExample": false
+                                  },
+                                  {
+                                    "name": "example",
+                                    "path": "example",
+                                    "uri": "color-overlay-example",
+                                    "isUIExample": true
+                                  },
+                                  {
+                                    "name": "code",
+                                    "path": "code",
+                                    "uri": "libraries/product/src/lib/efclass/components/common/overlay/color/.README/color-overlay.component/EXAMPLE.md",
+                                    "isUIExample": false
+                                  }
+                                ],
+                                "description": "libraries/product/src/lib/efclass/components/common/overlay/color/.README/color-overlay.component/DESCRIPTION.md",
+                                "controls": [
+                                  {
+                                    "header": "Inputs",
+                                    "controls": [
+                                      {
+                                        "controlType": "select",
+                                        "optionsId": "OVERLAY_COLORS",
+                                        "key": "color",
+                                        "label": "Color",
+                                        "value": "OVERLAY_COLORS.BLUE"
+                                      },
+                                      {
+                                        "controlType": "input",
+                                        "type": "checkbox",
+                                        "key": "allowTransition",
+                                        "label": "Allow transition",
+                                        "value": "true"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "path": "layout",
+                      "children": [
+                        {
+                          "path": "headers",
+                          "children": [
+                            {
+                              "path": "page-header-component",
+                              "label": "page header",
+                              "content": {
+                                "type": "component",
+                                "githubLink": "libraries/product/src/lib/efclass/components/layout/headers/page/page-header.component.ts",
+                                "info": [
+                                  {
+                                    "name": "api",
+                                    "path": "api",
+                                    "uri": "libraries/product/src/lib/efclass/components/layout/headers/page/.README/page-header.component/API.md",
+                                    "isUIExample": false
+                                  },
+                                  {
+                                    "name": "example",
+                                    "path": "example",
+                                    "uri": "page-header-example",
+                                    "isUIExample": true
+                                  },
+                                  {
+                                    "name": "code",
+                                    "path": "code",
+                                    "uri": "libraries/product/src/lib/efclass/components/layout/headers/page/.README/page-header.component/EXAMPLE.md",
+                                    "isUIExample": false
+                                  }
+                                ],
+                                "demonstrates": "libraries/product/src/lib/efclass/components/layout/headers/page/.README/page-header.component/DEMONSTRATES.md",
+                                "description": "libraries/product/src/lib/efclass/components/layout/headers/page/.README/page-header.component/DESCRIPTION.md",
+                                "controls": [
+                                  {
+                                    "header": "Inputs",
+                                    "controls": [
+                                      {
+                                        "controlType": "input",
+                                        "key": "fallbackSeed",
+                                        "label": "Fallback Seed",
+                                        "type": "number",
+                                        "value": 1,
+                                        "min": 1,
+                                        "max": 5
+                                      },
+                                      {
+                                        "controlType": "select",
+                                        "key": "fallbackColor",
+                                        "label": "Fallback Color",
+                                        "defaultValue": "blue",
+                                        "optionsId": "FALLBACK_COLORS"
+                                      },
+                                      {
+                                        "controlType": "select",
+                                        "key": "overlayColor",
+                                        "label": "Overlay Color",
+                                        "defaultValue": "blue",
+                                        "optionsId": "OVERLAY_COLORS"
+                                      },
+                                      {
+                                        "controlType": "select",
+                                        "key": "imageUrl",
+                                        "label": "Image Url",
+                                        "defaultValue": 1,
+                                        "optionsId": "IMAGE_URLS"
+                                      },
+                                      {
+                                        "controlType": "input",
+                                        "key": "title",
+                                        "label": "Title",
+                                        "type": "text",
+                                        "value": "Header Title"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "header": "Content slots",
+                                    "controls": [
+                                      {
+                                        "controlType": "input",
+                                        "key": "topSlotContentHeight",
+                                        "label": "Top Slot Content Height",
+                                        "type": "number",
+                                        "value": 0
+                                      },
+                                      {
+                                        "controlType": "input",
+                                        "key": "contentSlotContentHeight",
+                                        "label": "Content Slot Content Height",
+                                        "type": "number",
+                                        "value": 0
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "path": "lesson-plan",
+                      "children": [
+                        {
+                          "path": "lesson-plan-card-component",
+                          "label": "lesson plan card",
+                          "content": {
+                            "type": "component",
+                            "githubLink": "libraries/product/src/lib/efclass/components/lesson-plan/card/lesson-plan-card.component.ts",
+                            "info": [
+                              {
+                                "name": "api",
+                                "path": "api",
+                                "uri": "libraries/product/src/lib/efclass/components/lesson-plan/card/.README/lesson-plan-card.component/API.md",
+                                "isUIExample": false
+                              },
+                              {
+                                "name": "example",
+                                "path": "example",
+                                "uri": "lesson-plan-card-example",
+                                "isUIExample": true
+                              },
+                              {
+                                "name": "code",
+                                "path": "code",
+                                "uri": "libraries/product/src/lib/efclass/components/lesson-plan/card/.README/lesson-plan-card.component/EXAMPLE.md",
+                                "isUIExample": false
+                              }
+                            ],
+                            "description": "libraries/product/src/lib/efclass/components/lesson-plan/card/.README/lesson-plan-card.component/DESCRIPTION.md",
+                            "controls": [
+                              {
+                                "header": "Inputs",
+                                "controls": [
+                                  {
+                                    "controlType": "input",
+                                    "type": "checkbox",
+                                    "key": "isLarge",
+                                    "label": "Large",
+                                    "value": "true"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "path": "lesson-plan-grid-component",
+                          "label": "lesson plan grid",
+                          "content": {
+                            "type": "component",
+                            "githubLink": "libraries/product/src/lib/efclass/components/lesson-plan/grid/lesson-plan-grid.component.ts",
+                            "info": [
+                              {
+                                "name": "api",
+                                "path": "api",
+                                "uri": "libraries/product/src/lib/efclass/components/lesson-plan/grid/.README/lesson-plan-grid.component/API.md",
+                                "isUIExample": false
+                              },
+                              {
+                                "name": "example",
+                                "path": "example",
+                                "uri": "lesson-plan-grid-example",
+                                "isUIExample": true
+                              },
+                              {
+                                "name": "code",
+                                "path": "code",
+                                "uri": "libraries/product/src/lib/efclass/components/lesson-plan/grid/.README/lesson-plan-grid.component/EXAMPLE.md",
+                                "isUIExample": false
+                              }
+                            ],
+                            "demonstrates": "libraries/product/src/lib/efclass/components/lesson-plan/grid/.README/lesson-plan-grid.component/DEMONSTRATES.md",
+                            "description": "libraries/product/src/lib/efclass/components/lesson-plan/grid/.README/lesson-plan-grid.component/DESCRIPTION.md",
+                            "controls": [
+                              {
+                                "header": "Inputs",
+                                "controls": [
+                                  {
+                                    "controlType": "input",
+                                    "key": "header",
+                                    "label": "Header",
+                                    "type": "text",
+                                    "value": "Header"
+                                  },
+                                  {
+                                    "controlType": "input",
+                                    "key": "title",
+                                    "label": "Title",
+                                    "type": "text",
+                                    "value": "Title"
+                                  },
+                                  {
+                                    "controlType": "input",
+                                    "type": "checkbox",
+                                    "key": "showHero",
+                                    "label": "Show Hero",
+                                    "value": "false"
+                                  },
+                                  {
+                                    "controlType": "input",
+                                    "type": "checkbox",
+                                    "key": "showMyLibraryCard",
+                                    "label": "Show My Library Card",
+                                    "value": "false"
+                                  },
+                                  {
+                                    "controlType": "input",
+                                    "type": "checkbox",
+                                    "key": "fancyLayout",
+                                    "label": "Fancy Layout",
+                                    "value": "false"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "path": "lesson-plan-header-component",
+                          "label": "lesson plan header",
+                          "content": {
+                            "type": "component",
+                            "githubLink": "libraries/product/src/lib/efclass/components/lesson-plan/header/lesson-plan-header.component.ts",
+                            "info": [
+                              {
+                                "name": "api",
+                                "path": "api",
+                                "uri": "libraries/product/src/lib/efclass/components/lesson-plan/header/.README/lesson-plan-header.component/API.md",
+                                "isUIExample": false
+                              },
+                              {
+                                "name": "example",
+                                "path": "example",
+                                "uri": "lesson-plan-header-example",
+                                "isUIExample": true
+                              },
+                              {
+                                "name": "code",
+                                "path": "code",
+                                "uri": "libraries/product/src/lib/efclass/components/lesson-plan/header/.README/lesson-plan-header.component/EXAMPLE.md",
+                                "isUIExample": false
+                              }
+                            ],
+                            "demonstrates": "libraries/product/src/lib/efclass/components/lesson-plan/header/.README/lesson-plan-header.component/DEMONSTRATES.md",
+                            "description": "libraries/product/src/lib/efclass/components/lesson-plan/header/.README/lesson-plan-header.component/DESCRIPTION.md",
+                            "controls": []
+                          }
+                        },
+                        {
+                          "path": "lesson-plan-hero-component",
+                          "label": "lesson plan hero",
+                          "content": {
+                            "type": "component",
+                            "githubLink": "libraries/product/src/lib/efclass/components/lesson-plan/hero/lesson-plan-hero.component.ts",
+                            "info": [
+                              {
+                                "name": "api",
+                                "path": "api",
+                                "uri": "libraries/product/src/lib/efclass/components/lesson-plan/hero/.README/lesson-plan-hero.component/API.md",
+                                "isUIExample": false
+                              },
+                              {
+                                "name": "example",
+                                "path": "example",
+                                "uri": "lesson-plan-hero-example",
+                                "isUIExample": true
+                              },
+                              {
+                                "name": "code",
+                                "path": "code",
+                                "uri": "libraries/product/src/lib/efclass/components/lesson-plan/hero/.README/lesson-plan-hero.component/EXAMPLE.md",
+                                "isUIExample": false
+                              }
+                            ],
+                            "description": "libraries/product/src/lib/efclass/components/lesson-plan/hero/.README/lesson-plan-hero.component/DESCRIPTION.md",
+                            "controls": []
+                          }
+                        },
+                        {
+                          "path": "lesson-plan-vocabulary-component",
+                          "label": "lesson plan vocabulary",
+                          "content": {
+                            "type": "component",
+                            "githubLink": "libraries/product/src/lib/efclass/components/lesson-plan/vocabulary/lesson-plan-vocabulary.component.ts",
+                            "info": [
+                              {
+                                "name": "api",
+                                "path": "api",
+                                "uri": "libraries/product/src/lib/efclass/components/lesson-plan/vocabulary/.README/lesson-plan-vocabulary.component/API.md",
+                                "isUIExample": false
+                              },
+                              {
+                                "name": "example",
+                                "path": "example",
+                                "uri": "lesson-plan-vocabulary-example",
+                                "isUIExample": true
+                              },
+                              {
+                                "name": "code",
+                                "path": "code",
+                                "uri": "libraries/product/src/lib/efclass/components/lesson-plan/vocabulary/.README/lesson-plan-vocabulary.component/EXAMPLE.md",
+                                "isUIExample": false
+                              }
+                            ],
+                            "description": "libraries/product/src/lib/efclass/components/lesson-plan/vocabulary/.README/lesson-plan-vocabulary.component/DESCRIPTION.md",
+                            "controls": []
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "path": "media",
+                      "children": [
+                        {
+                          "path": "image",
+                          "children": [
+                            {
+                              "path": "fallback-image-component",
+                              "label": "fallback image",
+                              "content": {
+                                "type": "component",
+                                "githubLink": "libraries/product/src/lib/efclass/components/media/image/fallback/fallback-image.component.ts",
+                                "info": [
+                                  {
+                                    "name": "api",
+                                    "path": "api",
+                                    "uri": "libraries/product/src/lib/efclass/components/media/image/fallback/.README/fallback-image.component/API.md",
+                                    "isUIExample": false
+                                  },
+                                  {
+                                    "name": "example",
+                                    "path": "example",
+                                    "uri": "fallback-image-example",
+                                    "isUIExample": true
+                                  },
+                                  {
+                                    "name": "code",
+                                    "path": "code",
+                                    "uri": "libraries/product/src/lib/efclass/components/media/image/fallback/.README/fallback-image.component/EXAMPLE.md",
+                                    "isUIExample": false
+                                  }
+                                ],
+                                "description": "libraries/product/src/lib/efclass/components/media/image/fallback/.README/fallback-image.component/DESCRIPTION.md",
+                                "controls": [
+                                  {
+                                    "header": "Inputs",
+                                    "controls": [
+                                      {
+                                        "controlType": "input",
+                                        "key": "seed",
+                                        "label": "Seed",
+                                        "type": "number",
+                                        "value": 1,
+                                        "min": 1,
+                                        "max": 5
+                                      },
+                                      {
+                                        "controlType": "select",
+                                        "key": "color",
+                                        "label": "Color",
+                                        "defaultValue": "blue",
+                                        "optionsId": "FALLBACK_COLORS"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "path": "image-component",
+                              "label": "image",
+                              "content": {
+                                "type": "component",
+                                "githubLink": "libraries/product/src/lib/efclass/components/media/image/image/image.component.ts",
+                                "info": [
+                                  {
+                                    "name": "api",
+                                    "path": "api",
+                                    "uri": "libraries/product/src/lib/efclass/components/media/image/image/.README/image.component/API.md",
+                                    "isUIExample": false
+                                  },
+                                  {
+                                    "name": "example",
+                                    "path": "example",
+                                    "uri": "image-example",
+                                    "isUIExample": true
+                                  },
+                                  {
+                                    "name": "code",
+                                    "path": "code",
+                                    "uri": "libraries/product/src/lib/efclass/components/media/image/image/.README/image.component/EXAMPLE.md",
+                                    "isUIExample": false
+                                  }
+                                ],
+                                "description": "libraries/product/src/lib/efclass/components/media/image/image/.README/image.component/DESCRIPTION.md",
+                                "controls": [
+                                  {
+                                    "header": "Inputs",
+                                    "controls": [
+                                      {
+                                        "controlType": "select",
+                                        "key": "selectedSize",
+                                        "label": "Size type",
+                                        "defaultValue": "none",
+                                        "options": [
+                                          {
+                                            "value": "none",
+                                            "label": "None"
+                                          },
+                                          {
+                                            "value": "fixed",
+                                            "label": "Fixed"
+                                          },
+                                          {
+                                            "value": "max-content",
+                                            "label": "Max content"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "controlType": "select",
+                                        "key": "url",
+                                        "label": "Image Url",
+                                        "defaultValue": 1,
+                                        "optionsId": "IMAGE_URLS"
+                                      },
+                                      {
+                                        "controlType": "input",
+                                        "key": "fallbackSeed",
+                                        "label": "Fallback Seed",
+                                        "type": "number",
+                                        "value": 1,
+                                        "min": 1,
+                                        "max": 5
+                                      },
+                                      {
+                                        "controlType": "select",
+                                        "key": "fallbackColor",
+                                        "label": "Fallback Color",
+                                        "defaultValue": "blue",
+                                        "optionsId": "FALLBACK_COLORS"
+                                      },
+                                      {
+                                        "controlType": "input",
+                                        "type": "checkbox",
+                                        "key": "blur",
+                                        "label": "Blur",
+                                        "value": "true"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "path": "my-library",
+                      "children": [
+                        {
+                          "path": "my-library-lesson-plan-card-component",
+                          "label": "my library lesson plan card",
+                          "content": {
+                            "type": "component",
+                            "githubLink": "libraries/product/src/lib/efclass/components/my-library/lesson-plan-card/my-library-lesson-plan-card.component.ts",
+                            "info": [
+                              {
+                                "name": "api",
+                                "path": "api",
+                                "uri": "libraries/product/src/lib/efclass/components/my-library/lesson-plan-card/.README/my-library-lesson-plan-card.component/API.md",
+                                "isUIExample": false
+                              },
+                              {
+                                "name": "example",
+                                "path": "example",
+                                "uri": "my-library-lesson-plan-card-example",
+                                "isUIExample": true
+                              },
+                              {
+                                "name": "code",
+                                "path": "code",
+                                "uri": "libraries/product/src/lib/efclass/components/my-library/lesson-plan-card/.README/my-library-lesson-plan-card.component/EXAMPLE.md",
+                                "isUIExample": false
+                              }
+                            ],
+                            "description": "libraries/product/src/lib/efclass/components/my-library/lesson-plan-card/.README/my-library-lesson-plan-card.component/DESCRIPTION.md",
+                            "controls": [
+                              {
+                                "header": "Inputs",
+                                "controls": [
+                                  {
+                                    "controlType": "input",
+                                    "type": "checkbox",
+                                    "key": "displayMenu",
+                                    "label": "DisplayMenu",
+                                    "value": "false"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "label": "product",
+          "content": {
+            "type": "",
+            "githubLink": "libraries/product",
+            "isModule": true,
+            "description": "libraries/product/README.md"
+          }
+        },
+        {
+          "path": "styles",
+          "children": [
+            {
+              "path": "flex-grid-mixin",
+              "label": "flex grid",
+              "content": {
+                "type": "mixin",
+                "githubLink": "libraries/styles/flex/flex-grid.mixin.ts",
+                "info": [
+                  {
+                    "name": "api",
+                    "path": "api",
+                    "uri": "libraries/styles/flex/.README/flex-grid.mixin/API.md",
+                    "isUIExample": false
+                  }
+                ],
+                "description": "libraries/styles/flex/.README/flex-grid.mixin/DESCRIPTION.md",
+                "usage": {
+                  "pages": [
+                    "libraries/styles/flex/.README/flex-grid.mixin/USAGE.md"
+                  ]
+                }
+              }
+            }
+          ],
+          "label": "styles",
+          "content": {
+            "type": "",
+            "githubLink": "libraries/styles",
+            "isModule": true,
+            "description": "libraries/styles/README.md"
+          }
+        },
+        {
+          "path": "ts",
+          "children": [
+            {
+              "path": "ast",
+              "children": [
+                {
+                  "path": "parser",
+                  "label": "parser",
+                  "content": {
+                    "type": "",
+                    "githubLink": "libraries/ts/src/lib/ast/parser",
+                    "isModule": true,
+                    "description": "libraries/ts/src/lib/ast/parser/.README/DESCRIPTION.md",
+                    "usage": {
+                      "pages": [
+                        "libraries/ts/src/lib/ast/parser/.README/usage/1.md",
+                        "libraries/ts/src/lib/ast/parser/.README/usage/2.md",
+                        "libraries/ts/src/lib/ast/parser/.README/usage/3.md"
+                      ],
+                      "contents": "libraries/ts/src/lib/ast/parser/.README/usage/contents.md"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "label": "ts",
+          "content": {
+            "type": "",
+            "githubLink": "libraries/ts",
+            "isModule": true,
+            "description": "libraries/ts/README.md"
+          }
+        },
+        {
+          "path": "types",
+          "label": "types",
+          "content": {
+            "type": "",
+            "githubLink": "libraries/types",
+            "isModule": true,
+            "description": "libraries/types/README.md"
+          }
+        },
+        {
+          "path": "ui",
+          "children": [
+            {
+              "path": "component-loader",
+              "label": "component loader",
+              "content": {
+                "type": "",
+                "githubLink": "libraries/ui/src/lib/component-loader",
+                "isModule": true,
+                "description": "libraries/ui/src/lib/component-loader/.README/DESCRIPTION.md",
+                "sections": [
+                  {
+                    "path": "component-loader-io-base-abstract",
+                    "label": "component loader io base",
+                    "name": "component-loader-io-base.abstract",
+                    "content": {
+                      "type": "abstract",
+                      "githubLink": "libraries/ui/src/lib/component-loader/component-loader-io-base.abstract.ts",
+                      "info": [
+                        {
+                          "name": "api",
+                          "path": "api",
+                          "uri": "libraries/ui/src/lib/component-loader/.README/component-loader-io-base.abstract/API.md",
+                          "isUIExample": false
+                        }
+                      ],
+                      "description": "libraries/ui/src/lib/component-loader/.README/component-loader-io-base.abstract/DESCRIPTION.md"
+                    }
+                  },
+                  {
+                    "path": "component-loader-io-directive",
+                    "label": "component loader io",
+                    "name": "component-loader-io.directive",
+                    "content": {
+                      "type": "directive",
+                      "githubLink": "libraries/ui/src/lib/component-loader/component-loader-io.directive.ts",
+                      "info": [
+                        {
+                          "name": "api",
+                          "path": "api",
+                          "uri": "libraries/ui/src/lib/component-loader/.README/component-loader-io.directive/API.md",
+                          "isUIExample": false
+                        }
+                      ],
+                      "description": "libraries/ui/src/lib/component-loader/.README/component-loader-io.directive/DESCRIPTION.md"
+                    }
+                  },
+                  {
+                    "path": "component-loader-directive",
+                    "label": "component loader",
+                    "name": "component-loader.directive",
+                    "content": {
+                      "type": "directive",
+                      "githubLink": "libraries/ui/src/lib/component-loader/component-loader.directive.ts",
+                      "info": [
+                        {
+                          "name": "api",
+                          "path": "api",
+                          "uri": "libraries/ui/src/lib/component-loader/.README/component-loader.directive/API.md",
+                          "isUIExample": false
+                        }
+                      ],
+                      "description": "libraries/ui/src/lib/component-loader/.README/component-loader.directive/DESCRIPTION.md",
+                      "controls": [
+                        {
+                          "header": "Inputs",
+                          "controls": [
+                            {
+                              "controlType": "input",
+                              "type": "text",
+                              "key": "componentLoader",
+                              "label": "Component type"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "component-loader-service",
+                    "label": "component loader",
+                    "name": "component-loader.service",
+                    "content": {
+                      "type": "service",
+                      "githubLink": "libraries/ui/src/lib/component-loader/component-loader.service.ts",
+                      "info": [
+                        {
+                          "name": "api",
+                          "path": "api",
+                          "uri": "libraries/ui/src/lib/component-loader/.README/component-loader.service/API.md",
+                          "isUIExample": false
+                        }
+                      ],
+                      "description": "libraries/ui/src/lib/component-loader/.README/component-loader.service/DESCRIPTION.md"
+                    }
+                  }
+                ],
+                "usage": {
+                  "pages": [
+                    "libraries/ui/src/lib/component-loader/.README/usage/1.md",
+                    "libraries/ui/src/lib/component-loader/.README/usage/2.md",
+                    "libraries/ui/src/lib/component-loader/.README/usage/3.md"
+                  ],
+                  "contents": "libraries/ui/src/lib/component-loader/.README/usage/contents.md"
+                }
+              }
+            },
+            {
+              "path": "layout",
+              "children": [
+                {
+                  "path": "grid-layout-component",
+                  "label": "grid layout",
+                  "content": {
+                    "type": "component",
+                    "githubLink": "libraries/ui/src/lib/layout/grid/grid-layout.component.ts",
+                    "info": [
+                      {
+                        "name": "api",
+                        "path": "api",
+                        "uri": "libraries/ui/src/lib/layout/grid/.README/grid-layout.component/API.md",
+                        "isUIExample": false
+                      },
+                      {
+                        "name": "example",
+                        "path": "example",
+                        "uri": "grid-layout-example",
+                        "isUIExample": true
+                      },
+                      {
+                        "name": "code",
+                        "path": "code",
+                        "uri": "libraries/ui/src/lib/layout/grid/.README/grid-layout.component/EXAMPLE.md",
+                        "isUIExample": false
+                      }
+                    ],
+                    "description": "libraries/ui/src/lib/layout/grid/.README/grid-layout.component/DESCRIPTION.md",
+                    "controls": [
+                      {
+                        "header": "Inputs",
+                        "controls": [
+                          {
+                            "controlType": "input",
+                            "key": "itemCount",
+                            "label": "Item count",
+                            "type": "number",
+                            "value": 10,
+                            "min": 1,
+                            "max": 20
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "path": "responsive",
+              "children": [
+                {
+                  "path": "responsive-container-directive",
+                  "label": "responsive container",
+                  "content": {
+                    "type": "directive",
+                    "githubLink": "libraries/ui/src/lib/responsive/container/responsive-container.directive.ts",
+                    "description": "libraries/ui/src/lib/responsive/container/.README/responsive-container.directive/DESCRIPTION.md",
+                    "info": [
+                      {
+                        "name": "example",
+                        "path": "example",
+                        "uri": "responsive-container-example",
+                        "isUIExample": true
+                      },
+                      {
+                        "name": "code",
+                        "path": "code",
+                        "uri": "libraries/ui/src/lib/responsive/container/.README/responsive-container.directive/EXAMPLE.md",
+                        "isUIExample": false
+                      }
+                    ],
+                    "usage": {
+                      "pages": [
+                        "libraries/ui/src/lib/responsive/container/.README/responsive-container.directive/USAGE.md"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "label": "ui",
+          "content": {
+            "type": "",
+            "githubLink": "libraries/ui",
+            "isModule": true,
+            "description": "libraries/ui/README.md"
+          }
+        }
+      ]
+    }]
+}

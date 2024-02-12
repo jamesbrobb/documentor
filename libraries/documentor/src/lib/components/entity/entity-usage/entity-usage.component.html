@@ -1,0 +1,20 @@
+
+<jbr-content-hide title="How to use" [startOpen]="isLastElement">
+  @if (usage) {
+    @if (usage.contents) {
+      <jbr-markdown [hrefHandler]="contentLinkHandler" class="contents" [uri]="usage.contents" type="contents"></jbr-markdown>
+      <mat-divider></mat-divider>
+    }
+    @if (usage.pages.length === 1) {
+      <jbr-markdown [uri]="usage.pages[0]" type="usage"></jbr-markdown>
+    } @else {
+      <mat-tab-group class="pages" dynamicHeight>
+        @for (page of usage.pages; track $index) {
+          <mat-tab label="Example {{$index + 1}}">
+            <jbr-markdown [uri]="page" type="usage"></jbr-markdown>
+          </mat-tab>
+        }
+      </mat-tab-group>
+    }
+  }
+</jbr-content-hide>

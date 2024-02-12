@@ -1,0 +1,24 @@
+:host {
+  display: block;
+
+  .contents {
+    margin-bottom: 25px;
+    ::ng-deep {
+      markdown {
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .pages {
+    padding-top: 25px;
+
+    ::ng-deep {
+      .mat-mdc-tab-header {
+        display: none;
+      }
+    }
+  }
+}

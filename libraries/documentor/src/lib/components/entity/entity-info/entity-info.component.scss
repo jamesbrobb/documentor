@@ -1,0 +1,42 @@
+
+:host {
+  display: block;
+
+  --example-background-color: rgba(0,0,0,0.05);
+  --example-border-color: rgba(0,0,0,.12);
+
+  @media (prefers-color-scheme: dark) {
+    --example-background-color: rgba(255,255,255,0.05);
+    --example-border-color: rgba(255,255,255,.12);
+  }
+
+  .divider,
+  .description,
+  .usage {
+    margin-bottom: 30px;
+  }
+
+  .header {
+    margin-bottom: 25px;
+  }
+
+  .tab-content {
+    margin: 20px 0 10px;
+  }
+
+  .example {
+    display: grid;
+    resize: both;
+    overflow: auto;
+    max-width: 100%;
+    height: min-content;
+    min-height: 300px;
+    background-color: var(--example-background-color);
+    border: solid 1px var(--example-border-color);
+    padding: 10px;
+
+    &:empty {
+      display: none;
+    }
+  }
+}

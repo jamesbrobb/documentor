@@ -1,0 +1,21 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/libraries/@jamesbenrobb/documentor",
+  "lib": {
+    "entryFile": "src/public-api.ts",
+    "styleIncludePaths": [
+      "src/styles"
+    ]
+  },
+  "assets": [
+    {
+      "input": "src/styles",
+      "glob": "**/*.scss",
+      "output": "/styles"
+    }, {
+      "input": "src/assets",
+      "glob": "**/*.*",
+      "output": "/assets"
+    }
+  ]
+}

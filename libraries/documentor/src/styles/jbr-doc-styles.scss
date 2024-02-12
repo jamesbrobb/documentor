@@ -1,0 +1,44 @@
+@use 'sass:map';
+@use "@jamesbenrobb/styles/theme" as theme;
+@use "@jamesbenrobb/dynamic-route-app/styles/jbr-dra-styles" as dra;
+
+
+@mixin setJBRDocVars($light-theme: null, $dark-theme: null, $side-menu-width: null) {
+
+  $default-themes: theme.get-default-themes();
+
+  @if $light-theme == null {
+    $light-theme: nth($default-themes, 1);
+  }
+
+  @if $dark-theme == null {
+    $dark-theme: nth($default-themes, 2);
+  }
+
+  $primary-palettes: theme.get-mode-palettes-for(primary, $light-theme, $dark-theme);
+  $foreground-palettes: theme.get-mode-palettes-for(foreground, $light-theme, $dark-theme);
+
+  $light-text: theme.get-color-from-palette(nth($foreground-palettes, 1), text);
+  $dark-text: theme.get-color-from-palette(nth($foreground-palettes, 2), text);
+
+  $light-divider-color: theme.get-color-from-palette(nth($foreground-palettes, 1), divider);
+  $dark-divider-color: theme.get-color-from-palette(nth($foreground-palettes, 2), divider);
+
+  $light-link-color: theme.get-color-from-palette(nth($primary-palettes, 1), default);
+  $dark-link-color: theme.get-color-from-palette(nth($primary-palettes, 2), default);
+
+  --jbr-docs-link-color: #{$light-link-color};
+  --jbr-docs-divider-color: #{$light-divider-color};
+  --jbr-github-btn-icon-color: #{$light-text};
+  --jbr-markdown-link-color: #{$light-link-color};
+
+  @media (prefers-color-scheme: dark) {
+    --jbr-docs-link-color: #{$dark-link-color};
+    --jbr-docs-divider-color: #{$dark-divider-color};
+    --jbr-github-btn-icon-color: #{$dark-text};
+    --jbr-markdown-code-background-color: rgba(255,255,255,.05);
+    --jbr-markdown-link-color: #{$dark-link-color};
+  }
+
+  @include dra.setJBRDRAVars($light-theme, $dark-theme, $side-menu-width);
+}

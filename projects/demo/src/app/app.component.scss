@@ -1,0 +1,9 @@
+@use "jbr-doc-styles" as docs;
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  @include docs.setJBRDocVars();
+}

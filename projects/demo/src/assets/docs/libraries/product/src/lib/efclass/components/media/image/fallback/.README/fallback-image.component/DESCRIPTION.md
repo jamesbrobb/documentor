@@ -1,0 +1,2 @@
+
+Renders a fallback image.

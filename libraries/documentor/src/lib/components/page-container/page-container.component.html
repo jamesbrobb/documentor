@@ -1,0 +1,21 @@
+
+<section class="details mat-typography" [style.display]="page?.content?.demonstrates ? 'block' : 'none'">
+
+  <jbr-markdown [uri]="page?.content?.demonstrates" [type]="'explanation'"></jbr-markdown>
+
+</section>
+
+<jbr-entity-info [page]="page" [isLastElement]="(!sections || !sections.length)"></jbr-entity-info>
+
+@if (sections && sections.length > 0) {
+  <section class="sections">
+
+    <jbr-docs-page-sections [sections]="sections"
+      [section]="section"
+      [info]="info"
+      (sectionSelected)="onRouteSelected($event)"
+      (infoSelected)="onRouteSelected($event)">
+    </jbr-docs-page-sections>
+
+  </section>
+}
