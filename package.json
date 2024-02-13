@@ -9,7 +9,8 @@
     "test": "ng test",
     "build-lib-prod": "ng build documentor --configuration production",
     "build-app-prod": "ng build demo --configuration production",
-    "build-prod": "npm run build-lib-prod && npm run build-app-prod"
+    "build-prod": "npm run build-lib-prod && npm run build-app-prod",
+    "publish-lib": "npm publish dist/libraries/@jamesbenrobb/documentor"
   },
   "private": true,
   "dependencies": {
@@ -24,12 +25,12 @@
     "@angular/platform-browser-dynamic": "^17.1.0",
     "@angular/router": "^17.1.0",
     "@jamesbenrobb/core": "^1.0.2",
-    "@jamesbenrobb/dynamic-route-app": "^0.0.2",
+    "@jamesbenrobb/dynamic-route-app": "^0.0.6",
     "@jamesbenrobb/ng": "^1.0.3",
     "@jamesbenrobb/product": "^1.0.5",
     "@jamesbenrobb/styles": "^1.0.4",
     "@jamesbenrobb/types": "^1.0.0",
-    "@jamesbenrobb/ui": "^1.0.8",
+    "@jamesbenrobb/ui": "^1.0.13",
     "@jongwooo/prism-theme-github": "^1.14.0",
     "github-markdown-css": "^5.5.0",
     "ngx-markdown": "^17.1.1",

@@ -1,12 +1,12 @@
 import {EnvironmentProviders, importProvidersFrom, Provider} from "@angular/core";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
-import {getComponentLoaderProviders, getGithubBtnProviders} from "@jamesbenrobb/ui";
+import {getGithubBtnProviders} from "@jamesbenrobb/ui";
 import {getJBRDRAAppProviders} from "@jamesbenrobb/dynamic-route-app";
 import {DocsPageContent, getChildNodes} from "./content";
-import {DocsRouteComponent} from "./route/docs.route.component";
 import {getControlsLoaderProvider, getMarkdownProviders} from "./components";
 import {getControlsConfigProviders} from "./config";
+import {getPageContainerComponentProviders} from "./components/page-container/page-container.component.providers";
 
 
 export function getDocumentorProviders(routesConfigPath: string): (Provider | EnvironmentProviders)[] {
@@ -16,15 +16,17 @@ export function getDocumentorProviders(routesConfigPath: string): (Provider | En
       BrowserAnimationsModule,
       getMarkdownProviders()
     ),
-    getComponentLoaderProviders(),
+    //getComponentLoaderProviders(),
     getGithubBtnProviders('assets/github.svg'),
     getControlsConfigProviders(),
     getControlsLoaderProvider(),
+    getPageContainerComponentProviders(),
     ...getJBRDRAAppProviders<DocsPageContent>(
-      routesConfigPath,
-      'Docs',
-      DocsRouteComponent,
-      getChildNodes
+      routesConfigPath, {
+        appName: 'Documentor',
+        contentComponentType: 'docs-content',
+        getAllChildNodes: getChildNodes,
+      }
     )
   ];
 }

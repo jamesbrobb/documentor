@@ -2,7 +2,7 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Outp
 import {NgIf} from "@angular/common";
 
 import {rotate, openClose} from "@jamesbenrobb/ui";
-import {isContentNode} from "@jamesbenrobb/dynamic-route-app";
+import {isContentNode, ContentLoaderComponentIO} from "@jamesbenrobb/dynamic-route-app";
 
 import {EntityInfoComponent} from "../entity/entity-info/entity-info.component";
 import {MarkdownComponent} from "../markdown/markdown.component";
@@ -13,7 +13,7 @@ import {
   InfoNode,
   isContentNodeWithSections,
   isInfoNode,
-  getCurrentContentNode
+  getCurrentContentNode, DocsPageContent
 } from "../../content";
 
 
@@ -34,7 +34,7 @@ import {
     rotate()
   ]
 })
-export class PageContainerComponent implements OnChanges {
+export class PageContainerComponent implements OnChanges, ContentLoaderComponentIO<DocsPageContent> {
 
   @Input({required: true}) routeNodes?: DocsRouteNode[];
 

@@ -29,6 +29,7 @@ export class ControlsLoaderDirective extends ComponentLoaderIOBase<ControlCompon
   @Output() dataChange = new EventEmitter<{[key: string]: unknown}>();
 
   #destroyRef = inject(DestroyRef);
+  #loader = inject(ComponentLoaderDirective);
 
   constructor() {
 
