@@ -1,17 +1,7 @@
-import {ModuleWithProviders, SecurityContext} from "@angular/core";
+import {ModuleWithProviders} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {MarkdownModule, MARKED_OPTIONS} from "ngx-markdown";
 
-import 'prismjs';
-import 'prismjs/plugins/toolbar/prism-toolbar';
-import 'prismjs/components/prism-css';
-import 'prismjs/components/prism-css-extras';
-import 'prismjs/components/prism-javascript';
-import 'prismjs/components/prism-markup';
-import 'prismjs/components/prism-typescript';
-import 'prismjs/components/prism-sass';
-import 'prismjs/components/prism-scss';
-import 'prismjs/components/prism-json';
 
 type PrismHookEnv = {
   element: HTMLElement,
@@ -31,16 +21,14 @@ declare let Prism: {
 }
 
 
-
 export function getMarkdownProviders(): ModuleWithProviders<MarkdownModule> {
-
   return MarkdownModule.forRoot({
       loader: HttpClient,
       //sanitize: SecurityContext.NONE,
       markedOptions: {
         provide: MARKED_OPTIONS,
         useFactory: () => {
-
+          console.log('Prism', Prism.hooks);
           if (typeof Prism !== 'undefined' && typeof Prism.hooks !== 'undefined') {
             Prism.hooks.add('before-insert', (env: PrismHookEnv) => {
 
