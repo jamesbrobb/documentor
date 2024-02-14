@@ -16,7 +16,6 @@ export function getDocumentorProviders(routesConfigPath: string): (Provider | En
       BrowserAnimationsModule,
       getMarkdownProviders()
     ),
-    //getComponentLoaderProviders(),
     getGithubBtnProviders('assets/github.svg'),
     getControlsConfigProviders(),
     getControlsLoaderProvider(),

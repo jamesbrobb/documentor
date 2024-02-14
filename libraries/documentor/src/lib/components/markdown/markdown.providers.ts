@@ -28,10 +28,8 @@ export function getMarkdownProviders(): ModuleWithProviders<MarkdownModule> {
       markedOptions: {
         provide: MARKED_OPTIONS,
         useFactory: () => {
-          console.log('Prism', Prism.hooks);
           if (typeof Prism !== 'undefined' && typeof Prism.hooks !== 'undefined') {
             Prism.hooks.add('before-insert', (env: PrismHookEnv) => {
-
               for (let i = 0; i < env.element.children.length; i++) {
                 if(env.element.children[i].nodeName === 'A') {
                   const a = env.element.children[i] as HTMLAnchorElement;
