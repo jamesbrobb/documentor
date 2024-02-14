@@ -36,7 +36,9 @@ import {
 })
 export class PageContainerComponent implements OnChanges, ContentLoaderComponentIO<DocsPageContent> {
 
-  @Input({required: true}) routeNodes?: DocsRouteNode[];
+  @Input() routeNodes: DocsRouteNode[] | undefined;
+  @Input() currentNode: DocsContentNode | undefined
+  @Input() currentContent: DocsPageContent | undefined
 
   @Output() routeSelected = new EventEmitter<DocsRouteNode>();
 
