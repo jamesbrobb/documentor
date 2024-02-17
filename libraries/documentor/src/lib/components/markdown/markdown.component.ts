@@ -23,6 +23,7 @@ export class MarkdownComponent implements OnChanges {
 
   @Input({required: true}) uri?: string;
   @Input() type?: string = 'docs';
+  @Input() baseUri: string = 'assets/docs/';
   @Input() hrefHandler?: HrefInterceptorHandler;
 
   hasLoaded: boolean = false;

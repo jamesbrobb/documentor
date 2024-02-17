@@ -9,7 +9,7 @@ import {getControlsConfigProviders} from "./config";
 import {getPageContainerComponentProviders} from "./components/page-container/page-container.component.providers";
 
 
-export function getDocumentorProviders(routesConfigPath: string): (Provider | EnvironmentProviders)[] {
+export function getDocumentorProviders(routesConfigPath: string, appName: string = 'Documentor'): (Provider | EnvironmentProviders)[] {
   return [
     importProvidersFrom(
       HttpClientModule,
@@ -22,7 +22,7 @@ export function getDocumentorProviders(routesConfigPath: string): (Provider | En
     getPageContainerComponentProviders(),
     ...getJBRDRAAppProviders<DocsPageContent>(
       routesConfigPath, {
-        appName: 'Documentor',
+        appName,
         contentComponentType: 'docs-content',
         getAllChildNodes: getChildNodes,
       }

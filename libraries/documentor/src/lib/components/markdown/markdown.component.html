@@ -3,7 +3,7 @@
   <markdown [hrefListener]="hrefHandler"
             class="markdown-body"
             [ngClass]="{hide: !hasLoaded || hasError}"
-            [src]="'/assets/docs/' + uri"
+            [src]="baseUri + uri"
             [analyticsHrefListener]="'href-link'"
             (load)="onLoad($event)"
             (error)="onError($event)">

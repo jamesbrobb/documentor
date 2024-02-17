@@ -11,6 +11,10 @@
     --color-border-muted: var(--divider-color);
     --color-canvas-subtle: var(--code-background-color);
 
+    &.hide {
+      display: none;
+    }
+
     ::ng-deep {
       hr {
         height: 0;
