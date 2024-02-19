@@ -3,13 +3,17 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
 import {getGithubBtnProviders} from "@jamesbenrobb/ui";
 import {getJBRDRAAppProviders} from "@jamesbenrobb/dynamic-route-app";
-import {DocsPageContent, getChildNodes} from "./content";
+import {DocInfoContent, DocsPageContent, getChildNodes} from "./content";
 import {getControlsLoaderProvider, getMarkdownProviders} from "./components";
 import {getControlsConfigProviders} from "./config";
 import {getPageContainerComponentProviders} from "./components/page-container/page-container.component.providers";
 
 
-export function getDocumentorProviders(routesConfigPath: string, appName: string = 'Documentor'): (Provider | EnvironmentProviders)[] {
+export function getDocumentorProviders(
+  routesConfigPath: string,
+  appName: string = 'Documentor',
+  showDefaultContent: boolean = false
+): (Provider | EnvironmentProviders)[] {
   return [
     importProvidersFrom(
       HttpClientModule,
@@ -20,10 +24,10 @@ export function getDocumentorProviders(routesConfigPath: string, appName: string
     getControlsConfigProviders(),
     getControlsLoaderProvider(),
     getPageContainerComponentProviders(),
-    ...getJBRDRAAppProviders<DocsPageContent>(
+    ...getJBRDRAAppProviders<DocsPageContent | DocInfoContent>(
       routesConfigPath, {
         appName,
-        contentComponentType: 'docs-content',
+        contentComponentType: showDefaultContent ? '' : 'docs-content',
         getAllChildNodes: getChildNodes,
       }
     )

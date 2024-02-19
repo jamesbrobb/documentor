@@ -1,6 +1,6 @@
 {
   "name": "@jamesbenrobb/documentor",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "author": "James Robb",
   "description": "Angular application for documentation",
   "repository": {
@@ -19,7 +19,7 @@
     "@angular/platform-browser-dynamic": "^17.2.1",
     "@angular/router": "^17.2.1",
     "@jamesbenrobb/core": "^1.0.5",
-    "@jamesbenrobb/dynamic-route-app": "^0.0.8",
+    "@jamesbenrobb/dynamic-route-app": "^0.0.13",
     "@jamesbenrobb/ng": "^1.0.6",
     "@jamesbenrobb/styles": "^1.0.5",
     "@jamesbenrobb/types": "^1.0.2",

@@ -37,7 +37,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  @include docs.setJBRDocVars($light-theme, $dark-theme, $side-menu-width: 320px);
+  @include docs.setJBRDocVars($light-theme, $dark-theme, $side-menu-width: 260px);
 }
 
 html, body { height: 100%; }
