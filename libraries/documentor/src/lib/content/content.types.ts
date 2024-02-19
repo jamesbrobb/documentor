@@ -1,9 +1,10 @@
-import {RouteNode, RouteNodeBase, ContentNode} from "@jamesbenrobb/dynamic-route-app";
-import {Control, ControlGroup} from "../config";
+import {RouteNode, ContentNode} from "@jamesbenrobb/dynamic-route-app";
+import {ControlGroup} from "../config";
 
 
-export type DocsRouteNode = RouteNode<DocsPageContent>
-export type DocsContentNode = ContentNode<DocsPageContent>
+export type DocsRouteNode = RouteNode<DocsPageContent | DocInfoContent>
+export type DocsPageNode = ContentNode<DocsPageContent>
+export type DocsInfoNode = ContentNode<DocInfoContent>
 
 
 export type DocsPageContentUsage = {
@@ -22,15 +23,14 @@ export type DocsPageContent = {
 }
 
 export type DocsPageContentWithInfo = {
-  info: InfoNode[]
+  info: DocsInfoNode[]
 } & DocsPageContent;
 
 export type DocsPageContentWithSections = {
-  sections: DocsContentNode[]
+  sections: DocsPageNode[]
 } & DocsPageContent
 
-export type InfoNode = {
-  name: string
+export type DocInfoContent = {
   uri: string
   isUIExample: boolean
-} & RouteNodeBase
+}

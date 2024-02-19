@@ -1,16 +1,16 @@
-import {isParentNode, isContentNode} from "@jamesbenrobb/dynamic-route-app";
-import {DocsContentNode, DocsRouteNode} from "./content.types";
-import {isContentNodeWithInfo, isContentNodeWithSections} from "./content.type-guards";
+import {isParentNode} from "@jamesbenrobb/dynamic-route-app";
+import {DocsPageNode, DocsRouteNode} from "./content.types";
+import {isPageNodeWithSections, isPageNodeWithInfo, isPageNode} from "./content.type-guards";
 
 
 export function getChildNodes(node: DocsRouteNode): DocsRouteNode[] {
   let childNodes: DocsRouteNode[] = [];
 
-  if(isContentNodeWithInfo(node)) {
+  if(isPageNodeWithInfo(node)) {
     childNodes = childNodes.concat(node.content.info);
   }
 
-  if(isContentNodeWithSections(node)) {
+  if(isPageNodeWithSections(node)) {
     childNodes = childNodes.concat(node.content.sections);
   }
 
@@ -22,11 +22,11 @@ export function getChildNodes(node: DocsRouteNode): DocsRouteNode[] {
 }
 
 
-export function getCurrentContentNode(routeNodes: DocsRouteNode[]): DocsContentNode | undefined {
+export function getCurrentPageNode(routeNodes: DocsRouteNode[]): DocsPageNode | undefined {
   let node: DocsRouteNode | undefined;
   const rnLength = routeNodes.length;
 
-  if(rnLength === 1 && isContentNode(routeNodes[0])) {
+  if(rnLength === 1 && isPageNode(routeNodes[0])) {
     node = routeNodes[0]
   }
 
@@ -48,12 +48,12 @@ export function getCurrentContentNode(routeNodes: DocsRouteNode[]): DocsContentN
 
         node = parent;
 
-        if(isContentNode(child) && parent.children.indexOf(child) > -1) {
+        if(isPageNode(child) && parent.children.indexOf(child) > -1) {
           node = child;
         }
       }
     }
   }
 
-  return node ? isContentNode(node) ? node : undefined : undefined;
+  return node ? isPageNode(node) ? node : undefined : undefined;
 }
