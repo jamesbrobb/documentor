@@ -5,14 +5,18 @@
 
 </section>
 
-<jbr-entity-info [page]="page" [isLastElement]="(!sections || !sections.length)"></jbr-entity-info>
+<jbr-entity-info [page]="page"
+                 [info]="!section ? info : undefined"
+                 [isLastElement]="(!sections || !sections.length)"
+                 (infoSelectionChange)="onRouteSelected($event)">
+</jbr-entity-info>
 
 @if (sections && sections.length > 0) {
   <section class="sections">
 
     <jbr-docs-page-sections [sections]="sections"
       [section]="section"
-      [info]="info"
+      [info]="section ? info : undefined"
       (sectionSelected)="onRouteSelected($event)"
       (infoSelected)="onRouteSelected($event)">
     </jbr-docs-page-sections>

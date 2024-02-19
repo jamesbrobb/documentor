@@ -12,7 +12,7 @@ import {MarkdownComponent} from "../../markdown/markdown.component";
 import {EntityHeaderComponent} from "../entity-header/entity-header.component";
 import {EntityUsageComponent} from "../entity-usage/entity-usage.component";
 
-import {DocsPageContent, DocsPageContentWithInfo, InfoNode, isContentNodeWithInfo} from "../../../content";
+import {DocsPageContent, DocsPageContentWithInfo, DocsInfoNode, isPageNodeWithInfo} from "../../../content";
 
 
 @Component({
@@ -40,15 +40,15 @@ import {DocsPageContent, DocsPageContentWithInfo, InfoNode, isContentNodeWithInf
 export class EntityInfoComponent implements OnChanges {
 
   @Input({required: true}) page?: ContentNode<DocsPageContent> | ContentNode<DocsPageContentWithInfo>;
-  @Input() info?: InfoNode;
+  @Input() info?: DocsInfoNode;
   @Input() isLastElement: boolean = false;
 
-  @Output() infoSelectionChange = new EventEmitter<InfoNode>();
+  @Output() infoSelectionChange = new EventEmitter<DocsInfoNode>();
 
   selectedInfoIndex: number = 0;
   controlData: {[key: string]: any} = {};
 
-  isContentNodeWithInfo = isContentNodeWithInfo;
+  isPageNodeWithInfo = isPageNodeWithInfo;
 
   ngOnChanges(changes: SimpleChanges) {
 
@@ -58,7 +58,7 @@ export class EntityInfoComponent implements OnChanges {
 
     this.controlData = {};
 
-    if(!isContentNodeWithInfo(this.page) || !this.info) {
+    if(!isPageNodeWithInfo(this.page) || !this.info) {
       return;
     }
 
@@ -71,8 +71,8 @@ export class EntityInfoComponent implements OnChanges {
   }
 
   onSelectedIndexChange(index: number): void {
-    console.log('onSelectedIndexChange', index);
-    if(!this.page || !isContentNodeWithInfo(this.page)) {
+
+    if(!this.page || !isPageNodeWithInfo(this.page)) {
       return;
     }
 

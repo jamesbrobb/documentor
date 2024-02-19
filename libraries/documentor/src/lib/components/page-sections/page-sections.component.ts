@@ -5,7 +5,7 @@ import {toClassCasePipe} from "@jamesbenrobb/ui";
 
 import {EntityInfoComponent} from "../entity/entity-info/entity-info.component";
 import {EntityTypeLabelComponent} from "../entity/entity-type-label/entity-type-label.component";
-import {DocsContentNode, InfoNode} from "../../content";
+import {DocsPageNode, DocsInfoNode} from "../../content";
 
 
 @Component({
@@ -25,14 +25,14 @@ import {DocsContentNode, InfoNode} from "../../content";
 })
 export class PageSectionsComponent {
 
-  @Input({required: true}) sections?: DocsContentNode[];
-  @Input({required: true}) section?: DocsContentNode;
-  @Input() info?: InfoNode;
+  @Input({required: true}) sections?: DocsPageNode[];
+  @Input({required: true}) section?: DocsPageNode;
+  @Input() info?: DocsInfoNode;
 
-  @Output() sectionSelected = new EventEmitter<DocsContentNode | undefined>();
-  @Output() infoSelected = new EventEmitter<InfoNode>();
+  @Output() sectionSelected = new EventEmitter<DocsPageNode | undefined>();
+  @Output() infoSelected = new EventEmitter<DocsInfoNode>();
 
-  onSectionOpened(section: DocsContentNode): void {
+  onSectionOpened(section: DocsPageNode): void {
 
     if(section === this.section) {
       return;
@@ -41,7 +41,7 @@ export class PageSectionsComponent {
     this.sectionSelected.emit(section);
   }
 
-  onSectionClosed(section: DocsContentNode): void {
+  onSectionClosed(section: DocsPageNode): void {
 
     if(section !== this.section) {
       return;
@@ -50,7 +50,7 @@ export class PageSectionsComponent {
     this.sectionSelected.emit();
   }
 
-  onInfoSelected(info: InfoNode): void {
+  onInfoSelected(info: DocsInfoNode): void {
     this.infoSelected.emit(info);
   }
 }

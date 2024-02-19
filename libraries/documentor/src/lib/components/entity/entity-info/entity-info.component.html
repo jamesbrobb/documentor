@@ -13,18 +13,18 @@
 
 @if (pg.content.usage) {
   <mat-divider class="divider"></mat-divider>
-  <jbr-entity-usage class="usage" [usage]="pg.content.usage" [isLastElement]="isLastElement && !isContentNodeWithInfo(pg)"></jbr-entity-usage>
+  <jbr-entity-usage class="usage" [usage]="pg.content.usage" [isLastElement]="isLastElement && !isPageNodeWithInfo(pg)"></jbr-entity-usage>
 }
 
 <mat-divider class="divider"></mat-divider>
 
-@if (pg|guardType : isContentNodeWithInfo; as section) {
+@if (pg|guardType : isPageNodeWithInfo; as section) {
 
   <section>
 
     <mat-tab-group dynamicHeight [selectedIndex]="selectedInfoIndex" (selectedIndexChange)="onSelectedIndexChange($event)">
 
-    @for (info of section.content.info; track info.uri) {
+    @for (info of section.content.info; track info.content.uri) {
 
       <!-- as it stands deferred loading of each tab content is clunky. Needs investigation to get working smoothly-->
       <!--<mat-tab [label]="info.name">
@@ -33,10 +33,10 @@
           </ng-template>
         </mat-tab>-->
 
-      <mat-tab [label]="info.name|uppercase">
+      <mat-tab [label]="(info.label || 'no label') | uppercase">
         <div class="tab-content">
-          @if (!info.isUIExample) {
-            <jbr-markdown [uri]="info.uri" type="{{info.name|lowercase}}"></jbr-markdown>
+          @if (!info.content.isUIExample) {
+            <jbr-markdown [uri]="info.content.uri" type="{{(info.label || 'no label') |lowercase}}"></jbr-markdown>
           } @else {
             <section class="controls" *ngIf="section.content.controls">
 
@@ -47,9 +47,9 @@
 
             </section>
 
-            <section class="example" *ngIf="info.uri">
+            <section class="example" *ngIf="info.content.uri">
 
-              <ng-container componentLoaderIO="{{info.uri}}" [inputs]="controlData">
+              <ng-container componentLoaderIO="{{info.content.uri}}" [inputs]="controlData">
               </ng-container>
 
             </section>

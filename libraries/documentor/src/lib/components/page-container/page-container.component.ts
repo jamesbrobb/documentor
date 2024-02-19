@@ -2,18 +2,18 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Outp
 import {NgIf} from "@angular/common";
 
 import {rotate, openClose} from "@jamesbenrobb/ui";
-import {isContentNode, ContentLoaderComponentIO} from "@jamesbenrobb/dynamic-route-app";
+import {ContentLoaderComponentIO} from "@jamesbenrobb/dynamic-route-app";
 
 import {EntityInfoComponent} from "../entity/entity-info/entity-info.component";
 import {MarkdownComponent} from "../markdown/markdown.component";
 import {PageSectionsComponent} from "../page-sections/page-sections.component";
 import {
   DocsRouteNode,
-  DocsContentNode,
-  InfoNode,
-  isContentNodeWithSections,
-  isInfoNode,
-  getCurrentContentNode, DocsPageContent
+  DocsInfoNode,
+  DocsPageContent,
+  DocsPageNode,
+  DocInfoContent,
+  isInfoNode, getCurrentPageNode, isPageNodeWithSections, isPageNode
 } from "../../content";
 
 
@@ -34,19 +34,19 @@ import {
     rotate()
   ]
 })
-export class PageContainerComponent implements OnChanges, ContentLoaderComponentIO<DocsPageContent> {
+export class PageContainerComponent implements OnChanges, ContentLoaderComponentIO<DocsPageContent | DocInfoContent> {
 
   @Input() routeNodes: DocsRouteNode[] | undefined;
-  @Input() currentNode: DocsContentNode | undefined
-  @Input() currentContent: DocsPageContent | undefined
+  @Input() currentNode: DocsPageNode | DocsInfoNode | undefined
+  @Input() currentContent: DocsPageContent | DocInfoContent | undefined
 
   @Output() routeSelected = new EventEmitter<DocsRouteNode>();
 
-  page?: DocsContentNode;
-  section?: DocsContentNode;
-  info?: InfoNode;
+  page?: DocsPageNode;
+  section?: DocsPageNode;
+  info?: DocsInfoNode;
 
-  sections?: DocsContentNode[];
+  sections?: DocsPageNode[];
 
   ngOnChanges(changes?: SimpleChanges) {
 
@@ -59,7 +59,7 @@ export class PageContainerComponent implements OnChanges, ContentLoaderComponent
       return;
     }
 
-    this.page = getCurrentContentNode(this.routeNodes);
+    this.page = getCurrentPageNode(this.routeNodes);
 
     if(!this.page) {
       return;
@@ -70,17 +70,21 @@ export class PageContainerComponent implements OnChanges, ContentLoaderComponent
         child1 = nodes.at(0),
         child2 = nodes.at(1);
 
-    if(isContentNodeWithSections(this.page)) {
+    if(isPageNodeWithSections(this.page)) {
       this.sections = this.page.content.sections;
-      this.section = child1 && isContentNode(child1) ? child1 : undefined;
+    }
+
+    if(isPageNode(child1)) {
+      this.section = child1;
       this.info = isInfoNode(child2) ? child2 : undefined;
-    } else {
-      this.info = this.info = child1 ? isInfoNode(child1) ? child1 : undefined : undefined;
+    }
+
+    if(isInfoNode(child1)) {
+      this.info = child1;
     }
   }
 
   onRouteSelected(node?: DocsRouteNode): void {
-    console.log('onRouteSelected', node || this.page);
     this.routeSelected.emit(node || this.page);
   }
 }
