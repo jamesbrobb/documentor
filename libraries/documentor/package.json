@@ -1,6 +1,6 @@
 {
   "name": "@jamesbenrobb/documentor",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "author": "James Robb",
   "description": "Angular application for documentation",
   "repository": {
@@ -8,18 +8,25 @@
     "url": "https://github.com/jamesbrobb/documentor.git"
   },
   "peerDependencies": {
-    "@angular/common": "^17.1.0",
-    "@angular/core": "^17.1.0",
-    "@angular/router": "^17.1.0",
-    "@angular/cdk": "^17.0.5",
-    "@angular/material": "^17.0.5",
-    "@jamesbenrobb/core": "^1.0.2",
-    "@jamesbenrobb/dynamic-route-app": "^0.0.7",
-    "@jamesbenrobb/ng": "^1.0.3",
-    "@jamesbenrobb/styles": "^1.0.4",
-    "@jamesbenrobb/types": "^1.0.0",
-    "@jamesbenrobb/ui": "^1.0.13",
-    "ngx-markdown": "^17.1.1"
+    "@angular/animations": "^17.2.1",
+    "@angular/cdk": "^17.2.0",
+    "@angular/common": "^17.2.1",
+    "@angular/compiler": "^17.2.1",
+    "@angular/core": "^17.2.1",
+    "@angular/forms": "^17.2.1",
+    "@angular/material": "^17.2.0",
+    "@angular/platform-browser": "^17.2.1",
+    "@angular/platform-browser-dynamic": "^17.2.1",
+    "@angular/router": "^17.2.1",
+    "@jamesbenrobb/core": "^1.0.5",
+    "@jamesbenrobb/dynamic-route-app": "^0.0.8",
+    "@jamesbenrobb/ng": "^1.0.6",
+    "@jamesbenrobb/styles": "^1.0.5",
+    "@jamesbenrobb/types": "^1.0.2",
+    "@jamesbenrobb/ui": "^1.0.16",
+    "@jongwooo/prism-theme-github": "^1.14.0",
+    "github-markdown-css": "^5.5.1",
+    "normalize.css": "^8.0.1"
   },
   "dependencies": {
     "tslib": "^2.3.0"

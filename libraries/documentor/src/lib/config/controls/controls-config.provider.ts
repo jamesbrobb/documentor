@@ -1,4 +1,4 @@
-import {EnvironmentProviders, InjectionToken, makeEnvironmentProviders} from "@angular/core";
+import {EnvironmentProviders, InjectionToken, makeEnvironmentProviders, Optional} from "@angular/core";
 import {ControlsConfigParser, ControlsOptionsMap} from "./controls-config.parser";
 
 
@@ -12,7 +12,7 @@ export function getControlsConfigProviders(): EnvironmentProviders {
       return new ControlsConfigParser(optionsMap);
     },
     deps: [
-      ControlsOptionsMapService
+      [new Optional(), ControlsOptionsMapService]
     ]
-  }])
+  }]);
 }
