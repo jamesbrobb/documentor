@@ -38,7 +38,7 @@ export class ControlsConfigParser {
   }
 
   private _setSelectDefault(control: SelectControl): void {
-    console.log(control);
+    //console.log(control);
     if(control.defaultValue === undefined || !control.options || !control.options.length) {
       return;
     }
