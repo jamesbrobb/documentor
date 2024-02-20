@@ -25,6 +25,9 @@ export function getMarkdownProviders(): ModuleWithProviders<MarkdownModule> {
   return MarkdownModule.forRoot({
       loader: HttpClient,
       //sanitize: SecurityContext.NONE,
+      /*
+      prevents a tags being removed from code blocks
+       */
       markedOptions: {
         provide: MARKED_OPTIONS,
         useFactory: () => {

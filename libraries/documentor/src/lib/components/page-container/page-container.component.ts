@@ -1,11 +1,10 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 import {NgIf} from "@angular/common";
 
-import {rotate, openClose} from "@jamesbenrobb/ui";
+import {rotate, openClose, MarkdownComponent} from "@jamesbenrobb/ui";
 import {ContentLoaderComponentIO} from "@jamesbenrobb/dynamic-route-app";
 
 import {EntityInfoComponent} from "../entity/entity-info/entity-info.component";
-import {MarkdownComponent} from "../markdown/markdown.component";
 import {PageSectionsComponent} from "../page-sections/page-sections.component";
 import {
   DocsRouteNode,

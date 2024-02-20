@@ -4,9 +4,10 @@ import {HttpClientModule} from "@angular/common/http";
 import {getGithubBtnProviders} from "@jamesbenrobb/ui";
 import {getJBRDRAAppProviders} from "@jamesbenrobb/dynamic-route-app";
 import {DocInfoContent, DocsPageContent, getChildNodes} from "./content";
-import {getControlsLoaderProvider, getMarkdownProviders} from "./components";
+import {getControlsLoaderProvider} from "./components";
 import {getControlsConfigProviders} from "./config";
 import {getPageContainerComponentProviders} from "./components/page-container/page-container.component.providers";
+import {getMarkdownProviders} from "./providers/markdown.providers";
 
 
 export function getDocumentorProviders(

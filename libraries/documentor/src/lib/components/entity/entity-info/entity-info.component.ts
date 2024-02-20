@@ -4,11 +4,10 @@ import {LowerCasePipe, NgForOf, NgIf, UpperCasePipe} from "@angular/common";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatDividerModule} from "@angular/material/divider";
 
-import {ComponentLoaderIODirective, GuardTypePipe} from "@jamesbenrobb/ui";
+import {ComponentLoaderIODirective, GuardTypePipe, MarkdownComponent} from "@jamesbenrobb/ui";
 import {ContentNode} from "@jamesbenrobb/dynamic-route-app";
 
 import {ControlsLoaderDirective} from "../../controls/controls-loader.directive";
-import {MarkdownComponent} from "../../markdown/markdown.component";
 import {EntityHeaderComponent} from "../entity-header/entity-header.component";
 import {EntityUsageComponent} from "../entity-usage/entity-usage.component";
 

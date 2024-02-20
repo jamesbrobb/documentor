@@ -2,10 +2,9 @@ import {ChangeDetectionStrategy, Component, Input, ViewChild} from '@angular/cor
 import {NgIf, NgFor} from "@angular/common";
 import {MatTabGroup, MatTabsModule} from "@angular/material/tabs";
 import {MatDividerModule} from "@angular/material/divider";
-import {ContentHideComponent, HrefInterceptorHandler} from "@jamesbenrobb/ui";
+import {ContentHideComponent, HrefInterceptorHandler, MarkdownComponent} from "@jamesbenrobb/ui";
 
-import {MarkdownComponent} from "../../markdown/markdown.component";
-import {DocsPageContentUsage} from "../../../content/content.types";
+import {DocsPageContentUsage} from "../../../content";
 
 
 @Component({

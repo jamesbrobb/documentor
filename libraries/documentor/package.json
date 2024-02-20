@@ -1,6 +1,6 @@
 {
   "name": "@jamesbenrobb/documentor",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "author": "James Robb",
   "description": "Angular application for documentation",
   "repository": {
@@ -23,7 +23,7 @@
     "@jamesbenrobb/ng": "^1.0.6",
     "@jamesbenrobb/styles": "^1.0.5",
     "@jamesbenrobb/types": "^1.0.2",
-    "@jamesbenrobb/ui": "^1.0.16",
+    "@jamesbenrobb/ui": "^1.0.17",
     "@jongwooo/prism-theme-github": "^1.14.0",
     "github-markdown-css": "^5.5.1",
     "normalize.css": "^8.0.1"
