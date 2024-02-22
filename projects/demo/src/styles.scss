@@ -1,12 +1,6 @@
 @use "normalize.css";
 @use '@angular/material' as mat;
 @use "@jamesbenrobb/styles/theme" as theme;
-
-@use "codemirror/lib/codemirror.css";
-@use "codemirror/theme/3024-day.css" as day;
-
-@use "github-markdown-css/github-markdown.css";
-@use "@jongwooo/prism-theme-github/themes/prism-github-default-auto.css";
 @use "jbr-doc-styles" as docs;
 
 
@@ -27,17 +21,14 @@ $dark-theme: mat.define-dark-theme((
   typography: $typography
 ));
 
-@include theme.set-themes($light-theme, $dark-theme, $typography);
-@include theme.set-form-themes($light-theme, $dark-theme);
+
+@include docs.setJBRDocVars($light-theme, $dark-theme, $typography, $side-menu-width: 260px);
 
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
-}
-body {
-  @include docs.setJBRDocVars($light-theme, $dark-theme, $side-menu-width: 260px);
 }
 
 html, body { height: 100%; }

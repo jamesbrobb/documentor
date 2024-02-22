@@ -2,17 +2,29 @@
 @use "@jamesbenrobb/styles/theme" as theme;
 @use "@jamesbenrobb/dynamic-route-app/styles/jbr-dra-styles" as dra;
 
+@use "@jongwooo/prism-theme-github/themes/prism-github-skeleton.css";
+@use "github-markdown-css/github-markdown.css";
 
-@mixin setJBRDocVars($light-theme: null, $dark-theme: null, $side-menu-width: null) {
+@use "codemirror/lib/codemirror.css";
+@use "codemirror/theme/3024-day.css" as day;
 
-  $default-themes: theme.get-default-themes();
+@use "./prism-github-theme" as prism;
+@use "./github-markdown" as markdown;
 
-  @if $light-theme == null {
-    $light-theme: nth($default-themes, 1);
-  }
 
-  @if $dark-theme == null {
-    $dark-theme: nth($default-themes, 2);
+@mixin setJBRDocVars($light-theme: null, $dark-theme: null, $typography: null, $side-menu-width: null) {
+
+  @if $light-theme == null or $dark-theme == null or $typography == null {
+    $default-themes: theme.get-default-themes();
+    @if $light-theme == null {
+      $light-theme: nth($default-themes, 1);
+    }
+    @if $dark-theme == null {
+      $dark-theme: nth($default-themes, 2);
+    }
+    @if $typography == null {
+      $typography: nth($default-themes, 3);
+    }
   }
 
   $primary-palettes: theme.get-mode-palettes-for(primary, $light-theme, $dark-theme);
@@ -27,18 +39,32 @@
   $light-link-color: theme.get-color-from-palette(nth($primary-palettes, 1), default);
   $dark-link-color: theme.get-color-from-palette(nth($primary-palettes, 2), default);
 
-  --jbr-docs-link-color: #{$light-link-color};
-  --jbr-docs-divider-color: #{$light-divider-color};
-  --jbr-github-btn-icon-color: #{$light-text};
-  --jbr-markdown-link-color: #{$light-link-color};
+  :root {
+    [data-color-mode="light"] {
+      --jbr-docs-link-color: #{$light-link-color};
+      --jbr-docs-divider-color: #{$light-divider-color};
+      --jbr-github-btn-icon-color: #{$light-text};
+      --jbr-markdown-link-color: #{$light-link-color};
 
-  @media (prefers-color-scheme: dark) {
-    --jbr-docs-link-color: #{$dark-link-color};
-    --jbr-docs-divider-color: #{$dark-divider-color};
-    --jbr-github-btn-icon-color: #{$dark-text};
-    --jbr-markdown-code-background-color: rgba(255,255,255,.05);
-    --jbr-markdown-link-color: #{$dark-link-color};
+      .markdown-body {
+        @include markdown.light-colors();
+        @include prism.light-colors(#{$light-link-color}, #{$light-divider-color});
+      }
+    }
+
+    [data-color-mode="dark"]  {
+      --jbr-docs-link-color: #{$dark-link-color};
+      --jbr-docs-divider-color: #{$dark-divider-color};
+      --jbr-github-btn-icon-color: #{$dark-text};
+      --jbr-markdown-code-background-color: rgba(255,255,255,.05);
+      --jbr-markdown-link-color: #{$dark-link-color};
+
+      .markdown-body {
+        @include markdown.dark-colors();
+        @include prism.dark-colors(#{$dark-link-color}, #{$dark-divider-color});
+      }
+    }
   }
 
-  @include dra.setJBRDRAVars($light-theme, $dark-theme, $side-menu-width);
+  @include dra.setJBRDRAVars($light-theme, $dark-theme, $typography, $side-menu-width);
 }

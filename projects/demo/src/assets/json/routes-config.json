@@ -1,16 +1,175 @@
 {
-  "routes": [{
+  "routes": [
+    {
       "path": "/",
-      "redirectTo": "about"
+      "redirectTo": "core"
     },
     {
-      "path": "about",
+      "path": "core",
+      "children": [
+        {
+          "path": "analytics",
+          "children": [
+            {
+              "path": "trackers",
+              "children": [
+                {
+                  "path": "google-analytics",
+                  "label": "google analytics",
+                  "content": {
+                    "type": "",
+                    "githubLink": "assets/docs/core/src/lib/analytics/trackers/google-analytics",
+                    "isModule": true,
+                    "description": "assets/docs/core/src/lib/analytics/trackers/google-analytics/README.md"
+                  }
+                }
+              ]
+            }
+          ],
+          "label": "analytics",
+          "content": {
+            "type": "",
+            "githubLink": "assets/docs/core/src/lib/analytics",
+            "isModule": true,
+            "demonstrates": "assets/docs/core/src/lib/analytics/.README/DEMONSTRATES.md",
+            "description": "assets/docs/core/src/lib/analytics/.README/DESCRIPTION.md",
+            "sections": [
+              {
+                "path": "analytics-service",
+                "label": "analytics service",
+                "name": "analytics-service",
+                "content": {
+                  "type": "service",
+                  "githubLink": "assets/docs/core/src/lib/analytics/analytics-service.ts",
+                  "isModule": false,
+                  "info": [
+                    {
+                      "path": "api",
+                      "label": "api",
+                      "content": {
+                        "uri": "assets/docs/core/src/lib/analytics/.README/analytics-service/API.md",
+                        "isUIExample": false
+                      }
+                    },
+                    {
+                      "path": "example",
+                      "label": "example",
+                      "content": {
+                        "uri": "assets/docs/core/src/lib/analytics/.README/analytics-service/EXAMPLE.md",
+                        "isUIExample": false
+                      }
+                    }
+                  ],
+                  "description": "assets/docs/core/src/lib/analytics/.README/analytics-service/DESCRIPTION.md"
+                }
+              }
+            ],
+            "usage": {
+              "pages": [
+                "assets/docs/core/src/lib/analytics/.README/usage/1.md",
+                "assets/docs/core/src/lib/analytics/.README/usage/2.md",
+                "assets/docs/core/src/lib/analytics/.README/usage/3.md"
+              ],
+              "contents": "assets/docs/core/src/lib/analytics/.README/usage/contents.md"
+            }
+          }
+        },
+        {
+          "path": "commands",
+          "children": [
+            {
+              "path": "command",
+              "label": "command",
+              "content": {
+                "type": "",
+                "githubLink": "assets/docs/core/src/lib/commands/command",
+                "isModule": true,
+                "description": "assets/docs/core/src/lib/commands/command/.README/DESCRIPTION.md",
+                "usage": {
+                  "pages": [
+                    "assets/docs/core/src/lib/commands/command/.README/USAGE.md"
+                  ]
+                }
+              }
+            },
+            {
+              "path": "group",
+              "label": "group",
+              "content": {
+                "type": "",
+                "githubLink": "assets/docs/core/src/lib/commands/group",
+                "isModule": true,
+                "description": "assets/docs/core/src/lib/commands/group/.README/DESCRIPTION.md",
+                "usage": {
+                  "pages": [
+                    "assets/docs/core/src/lib/commands/group/.README/usage/1.md",
+                    "assets/docs/core/src/lib/commands/group/.README/usage/2.md",
+                    "assets/docs/core/src/lib/commands/group/.README/usage/3.md"
+                  ],
+                  "contents": "assets/docs/core/src/lib/commands/group/.README/usage/contents.md"
+                }
+              }
+            },
+            {
+              "path": "processor",
+              "label": "processor",
+              "content": {
+                "type": "",
+                "githubLink": "assets/docs/core/src/lib/commands/processor",
+                "isModule": true,
+                "description": "assets/docs/core/src/lib/commands/processor/.README/DESCRIPTION.md",
+                "usage": {
+                  "pages": [
+                    "assets/docs/core/src/lib/commands/processor/.README/usage/1.md",
+                    "assets/docs/core/src/lib/commands/processor/.README/usage/2.md",
+                    "assets/docs/core/src/lib/commands/processor/.README/usage/3.md",
+                    "assets/docs/core/src/lib/commands/processor/.README/usage/4.md"
+                  ],
+                  "contents": "assets/docs/core/src/lib/commands/processor/.README/usage/contents.md"
+                }
+              }
+            }
+          ],
+          "label": "commands",
+          "content": {
+            "type": "",
+            "githubLink": "assets/docs/core/src/lib/commands",
+            "isModule": true,
+            "demonstrates": "assets/docs/core/src/lib/commands/.README/DEMONSTRATES.md",
+            "description": "assets/docs/core/src/lib/commands/.README/DESCRIPTION.md"
+          }
+        },
+        {
+          "path": "http",
+          "label": "http",
+          "content": {
+            "type": "",
+            "githubLink": "assets/docs/core/src/lib/http",
+            "isModule": true,
+            "demonstrates": "assets/docs/core/src/lib/http/.README/DEMONSTRATES.md",
+            "description": "assets/docs/core/src/lib/http/.README/DESCRIPTION.md",
+            "usage": {
+              "pages": [
+                "assets/docs/core/src/lib/http/.README/usage/1.md",
+                "assets/docs/core/src/lib/http/.README/usage/2.md",
+                "assets/docs/core/src/lib/http/.README/usage/3.md",
+                "assets/docs/core/src/lib/http/.README/usage/4.md"
+              ],
+              "contents": "assets/docs/core/src/lib/http/.README/usage/contents.md"
+            }
+          }
+        }
+      ],
+      "label": "core",
       "content": {
-        "githubLink": "/",
-        "description": "details/home/README.md"
+        "type": "",
+        "githubLink": "assets/docs/core",
+        "isModule": true,
+        "description": "assets/docs/core/README.md"
       }
-    }, {
-      "path": "libraries",
+    },
+    {
+      "path": "ng",
       "children": [
         {
           "path": "core",
@@ -26,9 +185,9 @@
                       "label": "google analytics",
                       "content": {
                         "type": "",
-                        "githubLink": "core/src/lib/analytics/trackers/google-analytics",
+                        "githubLink": "assets/docs/ng/src/lib/core/analytics/trackers/google-analytics",
                         "isModule": true,
-                        "description": "core/src/lib/analytics/trackers/google-analytics/README.md"
+                        "description": "assets/docs/ng/src/lib/core/analytics/trackers/google-analytics/README.md"
                       }
                     }
                   ]
@@ -37,10 +196,350 @@
               "label": "analytics",
               "content": {
                 "type": "",
-                "githubLink": "core/src/lib/analytics",
+                "githubLink": "assets/docs/ng/src/lib/core/analytics",
                 "isModule": true,
-                "demonstrates": "core/src/lib/analytics/.README/DEMONSTRATES.md",
-                "description": "core/src/lib/analytics/.README/DESCRIPTION.md",
+                "description": "assets/docs/ng/src/lib/core/analytics/.README/DESCRIPTION.md",
+                "usage": {
+                  "pages": [
+                    "assets/docs/ng/src/lib/core/analytics/.README/usage/1.md",
+                    "assets/docs/ng/src/lib/core/analytics/.README/usage/2.md"
+                  ],
+                  "contents": "assets/docs/ng/src/lib/core/analytics/.README/usage/contents.md"
+                }
+              }
+            },
+            {
+              "path": "http",
+              "label": "http",
+              "content": {
+                "type": "",
+                "githubLink": "assets/docs/ng/src/lib/core/http",
+                "isModule": true,
+                "description": "assets/docs/ng/src/lib/core/http/README.md"
+              }
+            }
+          ]
+        }
+      ],
+      "label": "ng",
+      "content": {
+        "type": "",
+        "githubLink": "assets/docs/ng",
+        "isModule": true,
+        "description": "assets/docs/ng/README.md"
+      }
+    },
+    {
+      "path": "styles",
+      "children": [
+        {
+          "path": "flex-grid.mixin",
+          "label": "flex grid",
+          "content": {
+            "type": "mixin",
+            "githubLink": "assets/docs/styles/flex/flex-grid.mixin.ts",
+            "isModule": false,
+            "info": [
+              {
+                "path": "api",
+                "label": "api",
+                "content": {
+                  "uri": "assets/docs/styles/flex/.README/flex-grid.mixin/API.md",
+                  "isUIExample": false
+                }
+              },
+              {
+                "path": "example",
+                "label": "example",
+                "content": {
+                  "uri": "assets/docs/styles/flex/.README/flex-grid.mixin/EXAMPLE.md",
+                  "isUIExample": false
+                }
+              }
+            ],
+            "description": "assets/docs/styles/flex/.README/flex-grid.mixin/DESCRIPTION.md"
+          }
+        }
+      ],
+      "label": "styles",
+      "content": {
+        "type": "",
+        "githubLink": "assets/docs/styles",
+        "isModule": true,
+        "description": "assets/docs/styles/README.md"
+      }
+    },
+    {
+      "path": "ts",
+      "children": [
+        {
+          "path": "ast",
+          "children": [
+            {
+              "path": "parser",
+              "label": "parser",
+              "content": {
+                "type": "",
+                "githubLink": "assets/docs/ts/src/lib/ast/parser",
+                "isModule": true,
+                "description": "assets/docs/ts/src/lib/ast/parser/.README/DESCRIPTION.md",
+                "usage": {
+                  "pages": [
+                    "assets/docs/ts/src/lib/ast/parser/.README/usage/1.md",
+                    "assets/docs/ts/src/lib/ast/parser/.README/usage/2.md",
+                    "assets/docs/ts/src/lib/ast/parser/.README/usage/3.md"
+                  ],
+                  "contents": "assets/docs/ts/src/lib/ast/parser/.README/usage/contents.md"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "label": "ts",
+      "content": {
+        "type": "",
+        "githubLink": "assets/docs/ts",
+        "isModule": true,
+        "description": "assets/docs/ts/README.md"
+      }
+    },
+    {
+      "path": "types",
+      "label": "types",
+      "content": {
+        "type": "",
+        "githubLink": "assets/docs/types",
+        "isModule": true,
+        "description": "assets/docs/types/README.md"
+      }
+    },
+    {
+      "path": "ui",
+      "children": [
+        {
+          "path": "component-loader",
+          "label": "component loader",
+          "content": {
+            "type": "",
+            "githubLink": "assets/docs/ui/src/lib/component-loader",
+            "isModule": true,
+            "description": "assets/docs/ui/src/lib/component-loader/.README/DESCRIPTION.md",
+            "sections": [
+              {
+                "path": "component-loader-io-base-abstract",
+                "label": "component loader io base",
+                "name": "component-loader-io-base.abstract",
+                "content": {
+                  "type": "abstract",
+                  "githubLink": "assets/docs/ui/src/lib/component-loader/component-loader-io-base.abstract.ts",
+                  "isModule": false,
+                  "info": [
+                    {
+                      "path": "api",
+                      "label": "api",
+                      "content": {
+                        "uri": "assets/docs/ui/src/lib/component-loader/.README/component-loader-io-base.abstract/API.md",
+                        "isUIExample": false
+                      }
+                    }
+                  ],
+                  "description": "assets/docs/ui/src/lib/component-loader/.README/component-loader-io-base.abstract/DESCRIPTION.md"
+                }
+              },
+              {
+                "path": "component-loader-io-directive",
+                "label": "component loader io",
+                "name": "component-loader-io.directive",
+                "content": {
+                  "type": "directive",
+                  "githubLink": "assets/docs/ui/src/lib/component-loader/component-loader-io.directive.ts",
+                  "isModule": false,
+                  "info": [
+                    {
+                      "path": "api",
+                      "label": "api",
+                      "content": {
+                        "uri": "assets/docs/ui/src/lib/component-loader/.README/component-loader-io.directive/API.md",
+                        "isUIExample": false
+                      }
+                    },
+                    {
+                      "path": "code",
+                      "label": "code",
+                      "content": {
+                        "uri": "assets/docs/ui/src/lib/component-loader/.README/component-loader-io.directive/CODE.md",
+                        "isUIExample": false
+                      }
+                    }
+                  ],
+                  "description": "assets/docs/ui/src/lib/component-loader/.README/component-loader-io.directive/DESCRIPTION.md"
+                }
+              },
+              {
+                "path": "component-loader-directive",
+                "label": "component loader",
+                "name": "component-loader.directive",
+                "content": {
+                  "type": "directive",
+                  "githubLink": "assets/docs/ui/src/lib/component-loader/component-loader.directive.ts",
+                  "isModule": false,
+                  "info": [
+                    {
+                      "path": "api",
+                      "label": "api",
+                      "content": {
+                        "uri": "assets/docs/ui/src/lib/component-loader/.README/component-loader.directive/API.md",
+                        "isUIExample": false
+                      }
+                    },
+                    {
+                      "path": "code",
+                      "label": "code",
+                      "content": {
+                        "uri": "assets/docs/ui/src/lib/component-loader/.README/component-loader.directive/CODE.md",
+                        "isUIExample": false
+                      }
+                    }
+                  ],
+                  "description": "assets/docs/ui/src/lib/component-loader/.README/component-loader.directive/DESCRIPTION.md",
+                  "controls": [
+                    {
+                      "header": "Inputs",
+                      "controls": [
+                        {
+                          "controlType": "input",
+                          "type": "text",
+                          "key": "componentLoader",
+                          "label": "Component type"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "component-loader-service",
+                "label": "component loader",
+                "name": "component-loader.service",
+                "content": {
+                  "type": "service",
+                  "githubLink": "assets/docs/ui/src/lib/component-loader/component-loader.service.ts",
+                  "isModule": false,
+                  "info": [
+                    {
+                      "path": "api",
+                      "label": "api",
+                      "content": {
+                        "uri": "assets/docs/ui/src/lib/component-loader/.README/component-loader.service/API.md",
+                        "isUIExample": false
+                      }
+                    }
+                  ],
+                  "description": "assets/docs/ui/src/lib/component-loader/.README/component-loader.service/DESCRIPTION.md"
+                }
+              }
+            ],
+            "usage": {
+              "pages": [
+                "assets/docs/ui/src/lib/component-loader/.README/usage/1.md",
+                "assets/docs/ui/src/lib/component-loader/.README/usage/2.md",
+                "assets/docs/ui/src/lib/component-loader/.README/usage/3.md"
+              ],
+              "contents": "assets/docs/ui/src/lib/component-loader/.README/usage/contents.md"
+            }
+          }
+        },
+        {
+          "path": "content",
+          "children": [
+            {
+              "path": "markdown.component",
+              "label": "markdown",
+              "content": {
+                "type": "component",
+                "githubLink": "assets/docs/ui/src/lib/content/markdown/markdown.component.ts",
+                "isModule": false,
+                "description": "assets/docs/ui/src/lib/content/markdown/.README/markdown.component/DESCRIPTION.md",
+                "usage": {
+                  "pages": [
+                    "assets/docs/ui/src/lib/content/markdown/.README/markdown.component/usage/1.md",
+                    "assets/docs/ui/src/lib/content/markdown/.README/markdown.component/usage/2.md"
+                  ],
+                  "contents": "assets/docs/ui/src/lib/content/markdown/.README/markdown.component/usage/contents.md"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "path": "layout",
+          "children": [
+            {
+              "path": "grid-layout.component",
+              "label": "grid layout",
+              "content": {
+                "type": "component",
+                "githubLink": "assets/docs/ui/src/lib/layout/grid/grid-layout.component.ts",
+                "isModule": false,
+                "info": [
+                  {
+                    "path": "api",
+                    "label": "api",
+                    "content": {
+                      "uri": "assets/docs/ui/src/lib/layout/grid/.README/grid-layout.component/API.md",
+                      "isUIExample": false
+                    }
+                  },
+                  {
+                    "path": "example",
+                    "label": "example",
+                    "content": {
+                      "uri": "grid-layout-example",
+                      "isUIExample": true
+                    }
+                  },
+                  {
+                    "path": "code",
+                    "label": "code",
+                    "content": {
+                      "uri": "assets/docs/ui/src/lib/layout/grid/.README/grid-layout.component/EXAMPLE.md",
+                      "isUIExample": false
+                    }
+                  }
+                ],
+                "description": "assets/docs/ui/src/lib/layout/grid/.README/grid-layout.component/DESCRIPTION.md",
+                "controls": [
+                  {
+                    "header": "Inputs",
+                    "controls": [
+                      {
+                        "controlType": "input",
+                        "key": "itemCount",
+                        "label": "Item count",
+                        "type": "number",
+                        "value": 10,
+                        "min": 1,
+                        "max": 20
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "path": "responsive",
+          "children": [
+            {
+              "path": "responsive-container.directive",
+              "label": "responsive container",
+              "content": {
+                "type": "directive",
+                "githubLink": "assets/docs/ui/src/lib/responsive/container/responsive-container.directive.ts",
+                "isModule": false,
+                "description": "assets/docs/ui/src/lib/responsive/container/.README/responsive-container.directive/DESCRIPTION.md",
                 "info": [
                   {
                     "path": "example",
@@ -54,516 +553,23 @@
                     "path": "code",
                     "label": "code",
                     "content": {
-                      "uri": "ui/src/lib/responsive/container/.README/responsive-container.directive/EXAMPLE.md",
+                      "uri": "assets/docs/ui/src/lib/responsive/container/.README/responsive-container.directive/EXAMPLE.md",
                       "isUIExample": false
                     }
                   }
-                ],
-                "sections": [
-                  {
-                    "path": "analytics-service",
-                    "label": "analytics service",
-                    "name": "analytics-service",
-                    "content": {
-                      "type": "service",
-                      "githubLink": "core/src/lib/analytics/analytics-service.ts",
-                      "isModule": false,
-                      "info": [
-                        {
-                          "path": "api",
-                          "label": "api",
-                          "content": {
-                            "uri": "core/src/lib/analytics/.README/analytics-service/API.md",
-                            "isUIExample": false
-                          }
-                        },
-                        {
-                          "path": "example",
-                          "label": "example",
-                          "content": {
-                            "uri": "core/src/lib/analytics/.README/analytics-service/EXAMPLE.md",
-                            "isUIExample": false
-                          }
-                        }
-                      ],
-                      "description": "core/src/lib/analytics/.README/analytics-service/DESCRIPTION.md"
-                    }
-                  }
-                ],
-                "usage": {
-                  "pages": [
-                    "core/src/lib/analytics/.README/usage/1.md",
-                    "core/src/lib/analytics/.README/usage/2.md",
-                    "core/src/lib/analytics/.README/usage/3.md"
-                  ],
-                  "contents": "core/src/lib/analytics/.README/usage/contents.md"
-                }
-              }
-            },
-            {
-              "path": "commands",
-              "children": [
-                {
-                  "path": "command",
-                  "label": "command",
-                  "content": {
-                    "type": "",
-                    "githubLink": "core/src/lib/commands/command",
-                    "isModule": true,
-                    "description": "core/src/lib/commands/command/.README/DESCRIPTION.md",
-                    "usage": {
-                      "pages": [
-                        "core/src/lib/commands/command/.README/USAGE.md"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "path": "group",
-                  "label": "group",
-                  "content": {
-                    "type": "",
-                    "githubLink": "core/src/lib/commands/group",
-                    "isModule": true,
-                    "description": "core/src/lib/commands/group/.README/DESCRIPTION.md",
-                    "usage": {
-                      "pages": [
-                        "core/src/lib/commands/group/.README/usage/1.md",
-                        "core/src/lib/commands/group/.README/usage/2.md",
-                        "core/src/lib/commands/group/.README/usage/3.md"
-                      ],
-                      "contents": "core/src/lib/commands/group/.README/usage/contents.md"
-                    }
-                  }
-                },
-                {
-                  "path": "processor",
-                  "label": "processor",
-                  "content": {
-                    "type": "",
-                    "githubLink": "core/src/lib/commands/processor",
-                    "isModule": true,
-                    "description": "core/src/lib/commands/processor/.README/DESCRIPTION.md",
-                    "usage": {
-                      "pages": [
-                        "core/src/lib/commands/processor/.README/usage/1.md",
-                        "core/src/lib/commands/processor/.README/usage/2.md",
-                        "core/src/lib/commands/processor/.README/usage/3.md",
-                        "core/src/lib/commands/processor/.README/usage/4.md"
-                      ],
-                      "contents": "core/src/lib/commands/processor/.README/usage/contents.md"
-                    }
-                  }
-                }
-              ],
-              "label": "commands",
-              "content": {
-                "type": "",
-                "githubLink": "core/src/lib/commands",
-                "isModule": true,
-                "demonstrates": "core/src/lib/commands/.README/DEMONSTRATES.md",
-                "description": "core/src/lib/commands/.README/DESCRIPTION.md"
-              }
-            },
-            {
-              "path": "http",
-              "label": "http",
-              "content": {
-                "type": "",
-                "githubLink": "core/src/lib/http",
-                "isModule": true,
-                "demonstrates": "core/src/lib/http/.README/DEMONSTRATES.md",
-                "description": "core/src/lib/http/.README/DESCRIPTION.md",
-                "usage": {
-                  "pages": [
-                    "core/src/lib/http/.README/usage/1.md",
-                    "core/src/lib/http/.README/usage/2.md",
-                    "core/src/lib/http/.README/usage/3.md",
-                    "core/src/lib/http/.README/usage/4.md"
-                  ],
-                  "contents": "core/src/lib/http/.README/usage/contents.md"
-                }
+                ]
               }
             }
-          ],
-          "label": "core",
-          "content": {
-            "type": "",
-            "githubLink": "core",
-            "isModule": true,
-            "description": "core/README.md"
-          }
-        },
-        {
-          "path": "ng",
-          "children": [
-            {
-              "path": "core",
-              "children": [
-                {
-                  "path": "analytics",
-                  "children": [
-                    {
-                      "path": "trackers",
-                      "children": [
-                        {
-                          "path": "google-analytics",
-                          "label": "google analytics",
-                          "content": {
-                            "type": "",
-                            "githubLink": "ng/src/lib/core/analytics/trackers/google-analytics",
-                            "isModule": true,
-                            "description": "ng/src/lib/core/analytics/trackers/google-analytics/README.md"
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  "label": "analytics",
-                  "content": {
-                    "type": "",
-                    "githubLink": "ng/src/lib/core/analytics",
-                    "isModule": true,
-                    "description": "ng/src/lib/core/analytics/.README/DESCRIPTION.md",
-                    "usage": {
-                      "pages": [
-                        "ng/src/lib/core/analytics/.README/usage/1.md",
-                        "ng/src/lib/core/analytics/.README/usage/2.md"
-                      ],
-                      "contents": "ng/src/lib/core/analytics/.README/usage/contents.md"
-                    }
-                  }
-                },
-                {
-                  "path": "http",
-                  "label": "http",
-                  "content": {
-                    "type": "",
-                    "githubLink": "ng/src/lib/core/http",
-                    "isModule": true,
-                    "description": "ng/src/lib/core/http/README.md"
-                  }
-                }
-              ]
-            }
-          ],
-          "label": "ng",
-          "content": {
-            "type": "",
-            "githubLink": "ng",
-            "isModule": true,
-            "description": "ng/README.md"
-          }
-        },
-        {
-          "path": "styles",
-          "children": [
-            {
-              "path": "flex-grid.mixin",
-              "label": "flex grid",
-              "content": {
-                "type": "mixin",
-                "githubLink": "styles/flex/flex-grid.mixin.ts",
-                "isModule": false,
-                "info": [
-                  {
-                    "path": "api",
-                    "label": "api",
-                    "content": {
-                      "uri": "styles/flex/.README/flex-grid.mixin/API.md",
-                      "isUIExample": false
-                    }
-                  }
-                ],
-                "description": "styles/flex/.README/flex-grid.mixin/DESCRIPTION.md",
-                "usage": {
-                  "pages": [
-                    "styles/flex/.README/flex-grid.mixin/USAGE.md"
-                  ]
-                }
-              }
-            }
-          ],
-          "label": "styles",
-          "content": {
-            "type": "",
-            "githubLink": "styles",
-            "isModule": true,
-            "description": "styles/README.md"
-          }
-        },
-        {
-          "path": "ts",
-          "children": [
-            {
-              "path": "ast",
-              "children": [
-                {
-                  "path": "parser",
-                  "label": "parser",
-                  "content": {
-                    "type": "",
-                    "githubLink": "ts/src/lib/ast/parser",
-                    "isModule": true,
-                    "description": "ts/src/lib/ast/parser/.README/DESCRIPTION.md",
-                    "usage": {
-                      "pages": [
-                        "ts/src/lib/ast/parser/.README/usage/1.md",
-                        "ts/src/lib/ast/parser/.README/usage/2.md",
-                        "ts/src/lib/ast/parser/.README/usage/3.md"
-                      ],
-                      "contents": "ts/src/lib/ast/parser/.README/usage/contents.md"
-                    }
-                  }
-                }
-              ]
-            }
-          ],
-          "label": "ts",
-          "content": {
-            "type": "",
-            "githubLink": "ts",
-            "isModule": true,
-            "description": "ts/README.md"
-          }
-        },
-        {
-          "path": "types",
-          "label": "types",
-          "content": {
-            "type": "",
-            "githubLink": "types",
-            "isModule": true,
-            "description": "types/README.md"
-          }
-        },
-        {
-          "path": "ui",
-          "children": [
-            {
-              "path": "component-loader",
-              "label": "component loader",
-              "content": {
-                "type": "",
-                "githubLink": "ui/src/lib/component-loader",
-                "isModule": true,
-                "description": "ui/src/lib/component-loader/.README/DESCRIPTION.md",
-                "sections": [
-                  {
-                    "path": "component-loader-io-base-abstract",
-                    "label": "component loader io base",
-                    "name": "component-loader-io-base.abstract",
-                    "content": {
-                      "type": "abstract",
-                      "githubLink": "ui/src/lib/component-loader/component-loader-io-base.abstract.ts",
-                      "isModule": false,
-                      "info": [
-                        {
-                          "path": "api",
-                          "label": "api",
-                          "content": {
-                            "uri": "ui/src/lib/component-loader/.README/component-loader-io-base.abstract/API.md",
-                            "isUIExample": false
-                          }
-                        }
-                      ],
-                      "description": "ui/src/lib/component-loader/.README/component-loader-io-base.abstract/DESCRIPTION.md"
-                    }
-                  },
-                  {
-                    "path": "component-loader-io-directive",
-                    "label": "component loader io",
-                    "name": "component-loader-io.directive",
-                    "content": {
-                      "type": "directive",
-                      "githubLink": "ui/src/lib/component-loader/component-loader-io.directive.ts",
-                      "isModule": false,
-                      "info": [
-                        {
-                          "path": "api",
-                          "label": "api",
-                          "content": {
-                            "uri": "ui/src/lib/component-loader/.README/component-loader-io.directive/API.md",
-                            "isUIExample": false
-                          }
-                        }
-                      ],
-                      "description": "ui/src/lib/component-loader/.README/component-loader-io.directive/DESCRIPTION.md"
-                    }
-                  },
-                  {
-                    "path": "component-loader-directive",
-                    "label": "component loader",
-                    "name": "component-loader.directive",
-                    "content": {
-                      "type": "directive",
-                      "githubLink": "ui/src/lib/component-loader/component-loader.directive.ts",
-                      "isModule": false,
-                      "info": [
-                        {
-                          "path": "api",
-                          "label": "api",
-                          "content": {
-                            "uri": "ui/src/lib/component-loader/.README/component-loader.directive/API.md",
-                            "isUIExample": false
-                          }
-                        }
-                      ],
-                      "description": "ui/src/lib/component-loader/.README/component-loader.directive/DESCRIPTION.md",
-                      "controls": [
-                        {
-                          "header": "Inputs",
-                          "controls": [
-                            {
-                              "controlType": "input",
-                              "type": "text",
-                              "key": "componentLoader",
-                              "label": "Component type"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "path": "component-loader-service",
-                    "label": "component loader",
-                    "name": "component-loader.service",
-                    "content": {
-                      "type": "service",
-                      "githubLink": "ui/src/lib/component-loader/component-loader.service.ts",
-                      "isModule": false,
-                      "info": [
-                        {
-                          "path": "api",
-                          "label": "api",
-                          "content": {
-                            "uri": "ui/src/lib/component-loader/.README/component-loader.service/API.md",
-                            "isUIExample": false
-                          }
-                        }
-                      ],
-                      "description": "ui/src/lib/component-loader/.README/component-loader.service/DESCRIPTION.md"
-                    }
-                  }
-                ],
-                "usage": {
-                  "pages": [
-                    "ui/src/lib/component-loader/.README/usage/1.md",
-                    "ui/src/lib/component-loader/.README/usage/2.md",
-                    "ui/src/lib/component-loader/.README/usage/3.md"
-                  ],
-                  "contents": "ui/src/lib/component-loader/.README/usage/contents.md"
-                }
-              }
-            },
-            {
-              "path": "forms",
-              "children": [
-                {
-                  "path": "codemirror"
-                }
-              ]
-            },
-            {
-              "path": "layout",
-              "children": [
-                {
-                  "path": "grid-layout.component",
-                  "label": "grid layout",
-                  "content": {
-                    "type": "component",
-                    "githubLink": "ui/src/lib/layout/grid/grid-layout.component.ts",
-                    "isModule": false,
-                    "info": [
-                      {
-                        "path": "api",
-                        "label": "api",
-                        "content": {
-                          "uri": "ui/src/lib/layout/grid/.README/grid-layout.component/API.md",
-                          "isUIExample": false
-                        }
-                      },
-                      {
-                        "path": "example",
-                        "label": "example",
-                        "content": {
-                          "uri": "grid-layout-example",
-                          "isUIExample": true
-                        }
-                      },
-                      {
-                        "path": "code",
-                        "label": "code",
-                        "content": {
-                          "uri": "ui/src/lib/layout/grid/.README/grid-layout.component/EXAMPLE.md",
-                          "isUIExample": false
-                        }
-                      }
-                    ],
-                    "description": "ui/src/lib/layout/grid/.README/grid-layout.component/DESCRIPTION.md",
-                    "controls": [
-                      {
-                        "header": "Inputs",
-                        "controls": [
-                          {
-                            "controlType": "input",
-                            "key": "itemCount",
-                            "label": "Item count",
-                            "type": "number",
-                            "value": 10,
-                            "min": 1,
-                            "max": 20
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "path": "responsive",
-              "children": [
-                {
-                  "path": "responsive-container.directive",
-                  "label": "responsive container",
-                  "content": {
-                    "type": "directive",
-                    "githubLink": "ui/src/lib/responsive/container/responsive-container.directive.ts",
-                    "isModule": false,
-                    "description": "ui/src/lib/responsive/container/.README/responsive-container.directive/DESCRIPTION.md",
-                    "info": [
-                      {
-                        "path": "example",
-                        "label": "example",
-                        "content": {
-                          "uri": "responsive-container-example",
-                          "isUIExample": true
-                        }
-                      },
-                      {
-                        "path": "code",
-                        "label": "code",
-                        "content": {
-                          "uri": "ui/src/lib/responsive/container/.README/responsive-container.directive/EXAMPLE.md",
-                          "isUIExample": false
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "label": "ui",
-          "content": {
-            "type": "",
-            "githubLink": "ui",
-            "isModule": true,
-            "description": "ui/README.md"
-          }
+          ]
         }
-      ]
-    }]
+      ],
+      "label": "ui",
+      "content": {
+        "type": "",
+        "githubLink": "assets/docs/ui",
+        "isModule": true,
+        "description": "assets/docs/ui/README.md"
+      }
+    }
+  ]
 }
