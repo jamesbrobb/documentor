@@ -14,7 +14,7 @@ export type DocsPageContentUsage = {
 
 export type DocsPageContent = {
   description: string
-  githubLink: string
+  githubLink?: string
   type: string
   isModule: boolean
   demonstrates?: string

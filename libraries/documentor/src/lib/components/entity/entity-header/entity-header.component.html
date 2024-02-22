@@ -2,9 +2,11 @@
 
 <div class="header mat-typography" responsiveContainer>
 
-  @if (entity.content.githubLink; as githubLink) {
-    <jbr-github-btn [path]="githubLink" class="github-link"></jbr-github-btn>
-  }
+  <div>
+    @if (entity.content.githubLink; as githubLink) {
+      <jbr-github-btn [path]="githubLink" class="github-link"></jbr-github-btn>
+    }
+  </div>
 
   <div class="left">
 

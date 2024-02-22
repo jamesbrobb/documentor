@@ -9,8 +9,8 @@ import {
 
 
 export function isPageContent(content: any): content is DocsPageContent {
-  return content.githubLink !== undefined &&
-    content.type !== undefined &&
+  return content.githubLink !== undefined ||
+    content.type !== undefined ||
     content.description !== undefined;
 }
 
