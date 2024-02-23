@@ -1,4 +1,4 @@
-import {ApplicationConfig, importProvidersFrom} from '@angular/core';
+import {ApplicationConfig} from '@angular/core';
 import {getDocumentorProviders} from "@jamesbenrobb/documentor";
 import {
   getAnalyticsConfigProviders,
@@ -6,7 +6,7 @@ import {
   getGAAnalyticsConfigProviders,
   getGithubConfigProviders
 } from "@jamesbenrobb/ng";
-
+import {getExampleProvider} from "./examples/example.providers";
 
 
 export const appConfig: ApplicationConfig = {
@@ -15,6 +15,7 @@ export const appConfig: ApplicationConfig = {
     getGithubConfigProviders(),
     getAnalyticsConfigProviders(),
     getGAAnalyticsConfigProviders(),
+    getExampleProvider(),
     ...getDocumentorProviders(
       'assets/json/routes-config.json'
     )
