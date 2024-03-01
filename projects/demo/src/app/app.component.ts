@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {AppLayoutContainerComponent} from "@jamesbenrobb/dynamic-route-app";
+import {DocsAppLayoutContainerComponent} from "@jamesbenrobb/documentor";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    AppLayoutContainerComponent
+    DocsAppLayoutContainerComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

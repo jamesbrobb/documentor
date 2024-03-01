@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use "@jamesbenrobb/styles/theme" as theme;
+@use "@jamesbenrobb/styles/github-markdown-themes" as github;
 @use "@jamesbenrobb/dynamic-route-app/styles/jbr-dra-styles" as dra;
 
 @use "@jongwooo/prism-theme-github/themes/prism-github-skeleton.css";
@@ -7,9 +8,6 @@
 
 @use "codemirror/lib/codemirror.css";
 @use "codemirror/theme/3024-day.css" as day;
-
-@use "./prism-github-theme" as prism;
-@use "./github-markdown" as markdown;
 
 
 @mixin setJBRDocVars($light-theme: null, $dark-theme: null, $typography: null, $side-menu-width: null) {
@@ -39,16 +37,20 @@
   $light-link-color: theme.get-color-from-palette(nth($primary-palettes, 1), default);
   $dark-link-color: theme.get-color-from-palette(nth($primary-palettes, 2), default);
 
+  $light-contrast-color: theme.get-color-from-palette(nth($primary-palettes, 1), default-contrast);
+  $dark-contrast-color: theme.get-color-from-palette(nth($primary-palettes, 2), default-contrast);
+
   :root {
+
     [data-color-mode="light"] {
       --jbr-docs-link-color: #{$light-link-color};
       --jbr-docs-divider-color: #{$light-divider-color};
       --jbr-github-btn-icon-color: #{$light-text};
       --jbr-markdown-link-color: #{$light-link-color};
+      --jbr-ui-search-input-color: #{$light-contrast-color};
 
       .markdown-body {
-        @include markdown.light-colors();
-        @include prism.light-colors(#{$light-link-color}, #{$light-divider-color});
+        @include github.light-colors(#{$light-link-color}, #{$light-divider-color});
       }
     }
 
@@ -58,10 +60,10 @@
       --jbr-github-btn-icon-color: #{$dark-text};
       --jbr-markdown-code-background-color: rgba(255,255,255,.05);
       --jbr-markdown-link-color: #{$dark-link-color};
+      --jbr-ui-search-input-color: #{$dark-contrast-color};
 
       .markdown-body {
-        @include markdown.dark-colors();
-        @include prism.dark-colors(#{$dark-link-color}, #{$dark-divider-color});
+        @include github.dark-colors(#{$dark-link-color}, #{$dark-divider-color});
       }
     }
   }
