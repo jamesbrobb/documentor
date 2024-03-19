@@ -1,4 +1,4 @@
-import {isContentNode, ContentNode} from '@jamesbenrobb/dynamic-route-app';
+import {isContentNode, ContentNode} from '@jamesbenrobb/dynamic-routes';
 import {
   DocsInfoNode,
   DocsPageContent,

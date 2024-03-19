@@ -1,10 +1,10 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {NgIf} from "@angular/common";
 import {ResponsiveContainerDirectiveModule, toClassCasePipe, toWordsPipe, GithubBtnComponent} from "@jamesbenrobb/ui";
-import {ContentNode} from "@jamesbenrobb/dynamic-route-app";
+import {ContentNode} from "@jamesbenrobb/dynamic-routes";
 
 import {EntityTypeLabelComponent} from "../entity-type-label/entity-type-label.component";
-import {DocsPageContent} from "../../../content/content.types";
+import {DocsPageContent} from "../../../content";
 
 
 

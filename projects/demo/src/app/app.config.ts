@@ -16,7 +16,7 @@ export const appConfig: ApplicationConfig = {
     getAnalyticsConfigProviders(),
     getGAAnalyticsConfigProviders(),
     getExampleProvider(),
-    ...getDocumentorProviders(
+    getDocumentorProviders(
       'assets/json/routes-config.json'
     )
   ]

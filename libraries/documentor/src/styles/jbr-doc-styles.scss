@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use "@jamesbenrobb/styles/theme" as theme;
 @use "@jamesbenrobb/styles/github-markdown-themes" as github;
-@use "@jamesbenrobb/dynamic-route-app/styles/jbr-dra-styles" as dra;
+@use "@jamesbenrobb/app-shell/styles/jbr-app-shell-styles" as app-shell;
 
 @use "@jongwooo/prism-theme-github/themes/prism-github-skeleton.css";
 @use "github-markdown-css/github-markdown.css";
@@ -68,5 +68,5 @@
     }
   }
 
-  @include dra.setJBRDRAVars($light-theme, $dark-theme, $typography, $side-menu-width);
+  @include app-shell.setJBRAppShellVars($light-theme, $dark-theme, $typography, $side-menu-width);
 }

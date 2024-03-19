@@ -5,7 +5,7 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {MatDividerModule} from "@angular/material/divider";
 
 import {ComponentLoaderIODirective, GuardTypePipe, MarkdownComponent} from "@jamesbenrobb/ui";
-import {ContentNode} from "@jamesbenrobb/dynamic-route-app";
+import {ContentNode} from "@jamesbenrobb/dynamic-routes";
 
 import {ControlsLoaderDirective} from "../../controls/controls-loader.directive";
 import {EntityHeaderComponent} from "../entity-header/entity-header.component";

@@ -2,7 +2,7 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Outp
 import {NgIf} from "@angular/common";
 
 import {rotate, openClose, MarkdownComponent} from "@jamesbenrobb/ui";
-import {ContentLoaderComponentIO} from "@jamesbenrobb/dynamic-route-app";
+import {ContentLoaderComponentIO} from "@jamesbenrobb/dynamic-routes-ngx";
 
 import {EntityInfoComponent} from "../entity/entity-info/entity-info.component";
 import {PageSectionsComponent} from "../page-sections/page-sections.component";

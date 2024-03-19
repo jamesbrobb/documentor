@@ -1,4 +1,4 @@
-import {RouteNode, ContentNode} from "@jamesbenrobb/dynamic-route-app";
+import {RouteNode, ContentNode} from "@jamesbenrobb/dynamic-routes";
 import {ControlGroup} from "../config";
 
 

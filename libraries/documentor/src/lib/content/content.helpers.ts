@@ -1,4 +1,4 @@
-import {isParentNode} from "@jamesbenrobb/dynamic-route-app";
+import {isParentNode} from "@jamesbenrobb/dynamic-routes";
 import {DocsPageNode, DocsRouteNode} from "./content.types";
 import {isPageNodeWithSections, isPageNodeWithInfo, isPageNode} from "./content.type-guards";
 

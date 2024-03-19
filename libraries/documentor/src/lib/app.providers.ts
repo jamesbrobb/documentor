@@ -1,12 +1,14 @@
 import {EnvironmentProviders, importProvidersFrom, Provider} from "@angular/core";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {HttpClientModule} from "@angular/common/http";
-import {getJBRDRAAppProviders} from "@jamesbenrobb/dynamic-route-app";
+import {getJBRDRAppProviders} from "@jamesbenrobb/dynamic-routes-ngx";
+
 import {DocInfoContent, DocsPageContent, getChildNodes} from "./content";
 import {getControlsLoaderProvider} from "./components";
 import {getControlsConfigProviders} from "./config";
 import {getPageContainerComponentProviders} from "./components/page-container/page-container.component.providers";
 import {getMarkdownProviders} from "./providers/markdown.providers";
+import {getJBRAppShellProviders} from "@jamesbenrobb/app-shell";
+import {getJBRAppShellDynamicRoutesNgxProviders} from "@jamesbenrobb/app-shell-routing-adaptors";
 
 
 export function getDocumentorProviders(
@@ -22,7 +24,9 @@ export function getDocumentorProviders(
     getControlsConfigProviders(),
     getControlsLoaderProvider(),
     getPageContainerComponentProviders(),
-    ...getJBRDRAAppProviders<DocsPageContent | DocInfoContent>(
+    getJBRAppShellProviders(),
+    getJBRAppShellDynamicRoutesNgxProviders(),
+    getJBRDRAppProviders<DocsPageContent | DocInfoContent>(
       routesConfigPath, {
         appName,
         contentComponentType: showDefaultContent ? '' : 'docs-content',
