@@ -61,6 +61,6 @@
   },
   "github-config": {
       "root": "https://github.com/jamesbrobb/jbr/",
-      "app": "tree/main/"
+      "app": "tree/main/libraries/"
   }
 }

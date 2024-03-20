@@ -1,6 +1,6 @@
 {
   "name": "@jamesbenrobb/documentor",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "author": "James Robb",
   "description": "Angular application for documentation",
   "repository": {
@@ -18,13 +18,13 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
-    "@jamesbenrobb/app-shell": "^0.0.8",
+    "@jamesbenrobb/app-shell": "^0.0.9",
     "@jamesbenrobb/app-shell-routing-adaptors": "^0.0.8",
     "@jamesbenrobb/dynamic-routes": "^0.0.4",
     "@jamesbenrobb/dynamic-routes-ngx": "^0.0.4",
     "@jamesbenrobb/types": "^1.0.3",
     "@jamesbenrobb/styles": "^1.0.11",
-    "@jamesbenrobb/ui": "^1.0.40",
+    "@jamesbenrobb/ui": "^1.0.41",
     "@jongwooo/prism-theme-github": "1.14.0",
     "github-markdown-css": "5.5.1",
     "codemirror": "5.65.16",
